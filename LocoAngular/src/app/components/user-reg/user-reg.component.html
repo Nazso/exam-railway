@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <section class="container-sm container-card">
+            <div class="jumbotron">
+                <h3>Regisztráció</h3>
+                <hr>
+            </div>
+            <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Felhasználónév</label>
+                    <input formControlName="username" type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Jelszó</label>
+                    <input formControlName="password" type="password" class="form-control" id="password">
+                </div>
+                <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Regisztráció</button>
+            </form>
+        </section>
+    </div>
+</div>
+

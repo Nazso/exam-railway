@@ -6,9 +6,13 @@ $background_main: rgb(3, 81, 248);
         .nav-link {
             color: white;
         }
-    }
+}
 
-    .header__motto {
+.header-motto {
         justify-content: flex-end;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+}
+
+.user-name-holder {
+    color: yellow;
+}

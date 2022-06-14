@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" routerLink="">Főoldal</a>
+                <a class="nav-link" aria-current="page" href="#" routerLink="main">Főoldal</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" routerLink="electric" >Villamos mozdonyok</a>
@@ -16,23 +16,24 @@
               <li class="nav-item">
                 <a class="nav-link" routerLink="diesel" >Dízel mozdonyok</a>
               </li>
-              <li class="nav-item">
+              <li *ngIf="userObject" class="nav-item">
                 <a class="nav-link" routerLink="admin">Admin</a>
               </li>
-              <li class="nav-item">
+              <li *ngIf="userObject" class="nav-item">
                 <a class="nav-link" routerLink="comments">Kommentek</a>
               </li>
-              <li class="nav-item">
+              <li *ngIf="!userObject" class="nav-item">
                 <a class="nav-link" routerLink="">Bejelentkezés</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="">Kijelentkezés</a>
+              <li *ngIf="userObject" class="nav-item">
+                <a class="nav-link" (click)="logout()" routerLink="">Kijelentkezés</a>
               </li>
             </ul>
             </div>
+            <div class="user-name-holder">Hello {{userObject ? userObject.username : "user"}}!</div>
         </div>
     </nav>
-    <div class="header__motto d-flex">
+    <div class="header-motto d-flex">
       <h4>Mottó: <i>"Arccal a vasút felé..."</i></h4>
     </div>
 </div>

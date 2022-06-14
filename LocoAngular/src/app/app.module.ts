@@ -12,13 +12,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/card-electric/card.component';
 import { CardDieselComponent } from './components/card-diesel/card-diesel.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
-import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { CommentsComponent } from './components/comments/comments.component';
 import { BuyItemsComponent } from './components/buy-items/buy-items.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { CardDetailsElectricComponent } from './components/card-details-electric/card-details-electric.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
+import { UserRegComponent } from './components/user-reg/user-reg.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,16 @@ import { AdminComponent } from './components/admin/admin.component';
     CommentsComponent,
     BuyItemsComponent,
     CardDetailsElectricComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent,
+    UserRegComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

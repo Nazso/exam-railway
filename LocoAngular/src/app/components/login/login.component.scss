@@ -1,0 +1,52 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+
+
+.container-sm {
+    background-color: $background_cards;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    color: whitesmoke;
+    max-width: 50%;
+    box-shadow: 1px 4px 7px 0 rgba(30, 30, 30, 0.5);
+}
+
+.container {
+    background-color: $background_main;
+    background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+}
+
+.container-card {
+    background-color: $background_cards;
+    border: 3px solid yellow;
+    border-radius: 5px;
+}
+
+.register {
+    color: $background_main;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+hr {
+    color: yellow;
+    height: 5px;
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    width: 120px;
+    background: rgb(83, 109, 192);
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 700px) {
+    .container-sm {
+        max-width: 90%;
+    }
+}

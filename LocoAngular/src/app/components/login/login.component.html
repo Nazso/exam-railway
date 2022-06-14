@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <section class="container-sm container-card">
+            <div class="jumbotron">
+                <h3 class="m-3">Köszöntjük mozdony ismertető oldalunkon!</h3>
+                <p class="lead m-3">Amennyiben még nem rendelkezik felhasználó fiókkal, kérem regisztráljon!  <a class="register" routerLink="user">Regisztráció</a></p>
+                <hr>
+            </div>
+            <form #signInForm="ngForm" (ngSubmit)="signIn(signInForm)">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Felhasználónév</label>
+                    <input name="username" ngModel required type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Jelszó</label>
+                    <input name="password" ngModel required type="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn">Bejelentkezés</button>
+            </form>
+        </section>
+    </div>
+</div>
