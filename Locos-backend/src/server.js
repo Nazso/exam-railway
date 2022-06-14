@@ -6,6 +6,7 @@ const dieselRoutes = require('./controllers/Diesel/diesel.routes');
 const electricRoutes = require('./controllers/Electrician/electric.routes');
 const commentRoutes = require('./controllers/Comment/comment.routes');
 const buyItemRoutes = require('./controllers/BuyItems/buyItems.routes');
+const userRoutes = require('./controllers/User/user.routes');
 const cors = require('cors');
 
 const app = express();
@@ -17,7 +18,7 @@ mongoose.Promise = global.Promise;
 
 const connectionString = process.env.DB_CONNECTION;
 console.log(process.env.PORT);
-console.log(connectionString);
+// console.log(connectionString);
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
@@ -42,6 +43,8 @@ mongoose.connect(connectionString, {
 
 app.use(morgan('combined', {stream: {write: (message) => logger.info(message)}}));        //a morgan alapértelmezetten mindig a console-ra logol.
 
+//Authorization
+const authHandler = require('./auth/authHandler');
 
 app.use(express.json());
 
@@ -61,6 +64,12 @@ app.get('/', (req, res) => {
 //         req.params.img}`)
 // });
 
+app.post('/login', authHandler.login);
+app.post('/refresh', authHandler.refresh);
+app.post('/logout', authHandler.logout);
+
+
+app.use('/user', userRoutes);
 app.use('/diesel', dieselRoutes);
 app.use('/electric', electricRoutes);
 app.use('/comment', commentRoutes);
