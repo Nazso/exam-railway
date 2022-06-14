@@ -1,0 +1,46 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+
+.img_main {
+    width: 90%;
+    height: 400px;
+    border: 3px solid black;
+    border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.container {
+    background-color: $background_main;
+    background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+
+    .container__text {
+        color: yellow;
+        font-size:x-large;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.container__card {
+    background-color: $background_cards;
+    border: 3px solid yellow;
+    border-radius: 5px;
+
+    .text-photo {
+        h4 {
+            color: yellow;
+            text-align: center;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+// .img-form {
+//     max-width: 100%;
+//     box-sizing: content-box;
+// }

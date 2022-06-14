@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h1 class="mt-3">Tekintse meg a kiválasztott mozdony részletes ismertetőjét!</h1>
+        <div class="container-elements p-3">
+            <div class="row d-flex">
+                <div class="col-xl-8 col-md-12 container-details mb-3">
+                    <img class="img-details" [src]="loco?.url" alt="Mozdony fotó">
+                    <div class="m-3">
+                        <p>Mozdony típusa: {{ loco?.type }}</p>
+                        <p>Mozdony elnevezése: {{ loco?.name }}</p>
+                        <p>Gyártó: {{ loco?.manufacturer }}</p>
+                        <p>Erőátvitel</p>
+                        <p>Max sebesség</p>
+                        <p>Rövid ismertető</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" (click)="backToLocos()">Vissza</button>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <app-buy-items></app-buy-items>
+            </div>
+        </div>
+    </div>
+</div>
+

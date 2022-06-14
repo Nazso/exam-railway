@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="m-3">
+            <div class="m-3">
+                <h3>Ossza meg velünk véleményét, tapasztaltait!</h3>
+            </div>
+            <div class=" col-8 offset-2 container__card">
+                <form [formGroup]="commentForm">
+                    <div class="m-3">
+                        <label for="username" class="form-label">Felhasználónév</label>
+                        <input formControlName="username" type="text" class="form-control" id="username" placeholder="Itt adja meg felhasználónevét...">
+                      </div>
+                    <div class="m-3">
+                        <label for="date" class="form-label">Dátum</label>
+                        <input formControlName="date" type="date" class="form-control" id="date" placeholder="">
+                      </div>
+                      <div class="m-3">
+                        <label for="engine" class="form-label">Válasszon az erőforrások közül!</label>
+                        <select formControlName="engine" class="form-select" aria-label="Default select example">
+                            <option selected>Válasszon!</option>
+                            <option value="Villamos">Villamos</option>
+                            <option value="Dízel">Dízel</option>
+                          </select>
+                      </div>
+                      <div class="m-3">
+                        <label for="type" class="form-label">Válasszon típus szerint!</label>
+                        <select formControlName="type" class="form-select" aria-label="Default select example">
+                            <option selected>Válasszon!</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                      </div>
+                      <div class="m-3">
+                        <label for="usercomment" class="form-label">Szöveg</label>
+                        <textarea formControlName="usercomment" class="form-control" id="usercomment" rows="10" placeholder="Itt várjuk véleményét..."></textarea>
+                      </div>
+                      <div class="m-3 text-center">
+                          <button type="submit" class="btn btn-danger m-3" (click)="saveComment()">Küldés</button>
+                          <button type="submit" class="btn btn-warning m-3" (click)="cancelComment()">Mégsem</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

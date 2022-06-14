@@ -1,0 +1,15 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+
+
+.img_card {
+    width: 100%;
+}
+
+.card-style {
+    width: 30%;
+    background-color: $background_cards;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

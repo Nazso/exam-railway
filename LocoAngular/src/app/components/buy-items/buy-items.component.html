@@ -1,0 +1,54 @@
+<div class="container-details">
+    <div class="row">  
+            <div class="col-12">
+                <div class="text-center m-3">
+                    <h3>Modellvásár!</h3>
+                    <p>A vásárláshoz kérem jelentkezzen be!</p>
+                </div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Méret</th>
+                        <th scope="col">Darabszám</th>
+                        <th scope="col">Összeg</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Kis méret</td>
+                        <td>
+                            <input type="text" value="{{ itemsLittle }}">
+                            <span class="plus" (click)="riseNumberLittle()"> + </span>
+                            <span class="minus" (click)="decreaseNumberLittle()"> - </span>
+                        </td>
+                        <td class="col-3">{{ priceOfLittleModels }} HUF</td>
+                      </tr>
+                      <tr>
+                        <td>Közepes méret</td>
+                        <td>
+                                <input type="text" value="{{ itemsMiddle }}">
+                                <span class="plus" (click)="riseNumberMiddle()"> + </span>
+                                <span class="minus" (click)="decreaseNumberMiddle()"> - </span>
+                        </td>
+                            <td class="col-3">{{ priceOfMiddleModels }} HUF</td>
+                      </tr>
+                      <tr>
+                        <td>Nagy méret</td>
+                        <td>
+                            <input type="text" value="{{ itemsBig }}">
+                            <span class="plus" (click)="riseNumberBig()"> + </span>
+                            <span class="minus" (click)="decreaseNumberBig()"> - </span>
+                        </td>
+                        <td class="col-3">{{ priceOfBigModels }} HUF</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div>
+                      <p class="sum"><strong>Vásárlás végösszege: {{ priceSum }} HUF</strong></p>
+                  </div>
+                  <div>
+                      <button class="btn btn-danger m-3">Vásárlás</button>
+                  </div>
+            </div>
+    </div>
+</div>

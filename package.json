@@ -1,0 +1,40 @@
+{
+  "name": "fsapi-remek-assignment-nazso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Locos-backend/src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PM-FullStack-SV2/fsapi-remek-assignment-Nazso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PM-FullStack-SV2/fsapi-remek-assignment-Nazso/issues"
+  },
+  "homepage": "https://github.com/PM-FullStack-SV2/fsapi-remek-assignment-Nazso#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+
+    "mongoose": "^6.3.4",
+    "mongoose-id-validator": "^0.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "jest-mock-req-res": "^1.0.2",
+    "supertest": "^6.2.3"
+  }
+}

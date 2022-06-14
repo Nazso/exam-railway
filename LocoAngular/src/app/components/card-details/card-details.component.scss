@@ -1,0 +1,54 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+
+
+// .plus {
+//     font-size: large;
+//     font-weight: bolder;
+//     color: green;
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+// .minus {
+//     font-size: large;
+//     font-weight: bolder;
+//     color: red;
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+.img-details {
+    width: 100%
+}
+
+// input {
+//     max-width: 35px;
+//     height: 30px;
+// }
+
+// .cell-width {
+//     min-width: 400px;
+//     background-color: $background_cards;
+//     border: 3px solid yellow;
+//     border-radius: 5px;
+//     margin-left: 10px;
+// }
+
+.container {
+    background-color: $background_main;
+    background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+}
+
+.container-details {
+    background-color: $background_cards;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    color: white;
+}
+
+// .sum {
+//     margin: 5px;
+// }

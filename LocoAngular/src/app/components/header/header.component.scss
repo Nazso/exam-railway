@@ -1,0 +1,14 @@
+$background_main: rgb(3, 81, 248);
+
+.container-header {
+    min-height: 100px;
+    background-color: $background_main;
+        .nav-link {
+            color: white;
+        }
+    }
+
+    .header__motto {
+        justify-content: flex-end;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }

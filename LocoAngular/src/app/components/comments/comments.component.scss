@@ -1,0 +1,17 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+
+.container {
+    background-color: $background_main;
+    background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+}
+
+.container__card {
+    background-color: $background_cards;
+    border: 3px solid yellow;
+    border-radius: 5px;
+}
+
+label {
+    color: yellow;
+}
