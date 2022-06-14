@@ -1,0 +1,104 @@
+{
+  "electric": [
+    {
+      "id": 1,
+      "type": "V63",
+      "name": "Gigant",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/630138_Pilis_20180621.jpg/251px-630138_Pilis_20180621.jpg"
+      ],
+      "manufacturer": "Ganz-Mávag"
+    },
+    {
+      "id": 2,
+      "type": "V43",
+      "name": "Szili",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/V43_2311.jpg/120px-V43_2311.jpg"
+      ],
+      "manufacturer": "Ganz-Mávag"
+    },
+    {
+      "id": 3,
+      "type": "V46",
+      "name": "Csöpi",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/A_460_006_Mez%C5%91k%C3%B6vesd_%C3%A1llom%C3%A1son.jpg/120px-A_460_006_Mez%C5%91k%C3%B6vesd_%C3%A1llom%C3%A1son.jpg"
+      ],
+      "manufacturer": "Ganz-Mávag"
+    },
+    {
+      "id": 4,
+      "type": "1047",
+      "name": "Taurus",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/M%C3%A1v_1047.jpg/250px-M%C3%A1v_1047.jpg"
+      ],
+      "manufacturer": "Siemens"
+    }
+  ],
+  "diesel": [
+    {
+      "id": 1,
+      "type": "M62",
+      "name": "Szergej",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/M62.jpg/250px-M62.jpg"
+      ],
+      "manufacturer": "Szovjetunió"
+    },
+    {
+      "id": 2,
+      "type": "M61",
+      "name": "Nohab",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG/180px-Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG"
+      ],
+      "manufacturer": "Svédország"
+    },
+    {
+      "id": 3,
+      "type": "M63",
+      "name": "Bulldog",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/M63_003.jpg/250px-M63_003.jpg"
+      ],
+      "manufacturer": "Ganz-Mávag"
+    },
+    {
+      "id": 4,
+      "type": "M41",
+      "name": "Csörgő",
+      "url": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/18.04.10_Magyarb%C3%B3ly_M41_2122_%285806348416%29.jpg/120px-18.04.10_Magyarb%C3%B3ly_M41_2122_%285806348416%29.jpg"
+      ],
+      "manufacturer": "Ganz-Mávag"
+    }
+  ],
+  "comments": [
+    {
+      "username": "",
+      "date": "",
+      "engine": "",
+      "type": "",
+      "usercomment": "",
+      "id": 1
+    },
+    {
+      "username": "Nazso",
+      "date": "2022-06-25",
+      "engine": "Villamos",
+      "type": "2",
+      "usercomment": "lkjdhswb fljHBFL iubdfeoI OIWZDEGO F",
+      "id": 2
+    },
+    {
+      "username": "Zsolt",
+      "date": "2022-06-04",
+      "engine": "Dízel",
+      "type": "1",
+      "usercomment": "éouhpédrf huf puahd pDF P ",
+      "id": 3
+    }
+  ]
+}
