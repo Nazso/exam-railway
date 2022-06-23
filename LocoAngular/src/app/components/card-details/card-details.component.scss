@@ -49,6 +49,23 @@ $background_cards: rgb(119, 205, 245);
     color: white;
 }
 
-// .sum {
-//     margin: 5px;
-// }
+.btn-comment {
+    background-color: yellow;
+}
+
+caption {
+    color: yellow;
+    // margin: 3px;
+}
+
+
+.card-info {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+
+.card-info-yellow {
+    border: 1px solid yellow;
+    border-radius: 3px;
+}

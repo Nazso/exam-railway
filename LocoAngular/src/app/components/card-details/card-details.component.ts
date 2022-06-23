@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { DieselModel } from '../../models/diesel.model';
 import { DieselService } from '../../services/diesel.service';
+import { CommentService } from '../../services/comment.service';
+import { Comment } from '../../models/comment-model';
 
 
 @Component({
@@ -16,11 +17,20 @@ export class CardDetailsComponent implements OnInit, OnDestroy {
   public id?: any;
   public loco?: DieselModel;
 
+  public locoType?: string = this.loco?.type;
+
   public subs?: Subscription;
   public locoSubs?: Subscription;
-
+  public comments: Comment[] = [];
+  public detailedComment?: Comment;
+  public commentDetailsIsVisible: boolean = false;
   
-  constructor(private dieselService: DieselService, private router: Router, private ar: ActivatedRoute) {}
+  constructor(
+    private dieselService: DieselService,
+    private router: Router,
+    private ar: ActivatedRoute,
+    private commentService: CommentService
+    ) {}
   
   public backToLocos() {
     this.router.navigate(['diesel'])
@@ -37,13 +47,35 @@ export class CardDetailsComponent implements OnInit, OnDestroy {
       (loco: DieselModel) => this.loco = loco
     )
     console.log(this.loco);
+
+    this.commentService.getComment().subscribe({
+      next: (comments: Comment[]) => {
+        this.comments = comments
+        console.log(this.comments);
+      },
+      error: (err) => {console.log(err)},
+      complete: () => {}
+    })
    
-    // console.log(this.sizeForm.value)
   }
 
   ngOnDestroy(): void {
     this.subs?.unsubscribe()
     this.locoSubs?.unsubscribe()
+  }
+
+  public navigateToComment(id: any) {
+    this.router.navigate(['comments/' + id])
+  }
+
+  public openModal(comment: Comment) {
+    this.detailedComment = comment;
+    this.commentDetailsIsVisible = true;
+    console.log(comment);
+  }
+
+  public closeModal(): void {
+    this.commentDetailsIsVisible = false;
   }
   
 }

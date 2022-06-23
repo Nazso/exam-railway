@@ -1,0 +1,31 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+
+
+.container {
+    background-color: $background_main;
+    background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+
+    // .container__text {
+    //     color: yellow;
+    //     font-size:x-large;
+    //     text-align: center;
+    //     margin-top: 10px;
+    // }
+}
+
+.container-card {
+    background-color: $background_cards;
+    border: 3px solid yellow;
+    border-radius: 5px;
+}
+
+.listButton {
+    width: 150px;
+    background-color: rgb(207, 203, 203);
+    margin: 5px;
+}
+
+caption {
+    color: yellow
+}

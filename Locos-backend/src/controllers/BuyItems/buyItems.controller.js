@@ -7,9 +7,10 @@ const buyItem = require('../../model/buyItems.model');
 exports.create = (req, res, next) => {
     const newItem = {
         username: req.body['username'],
-        little: req.body['little'],
-        middle: req.body['middle'],
-        big: req.body['big'],
+        type: req.body['type'],
+        little: req.body['littleModel'],
+        middle: req.body['middleModel'],
+        big: req.body['bigModel'],
         price: req.body['price']
     };
 

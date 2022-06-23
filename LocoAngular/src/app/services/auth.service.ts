@@ -91,7 +91,7 @@ export class AuthService {
   }
 
   public getUserLoggedInObject(): Observable<any> {
-    return this. userLoggedInObject.asObservable();
+    return this.userLoggedInObject.asObservable();
   };
 
 }

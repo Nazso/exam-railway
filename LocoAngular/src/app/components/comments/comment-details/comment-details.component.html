@@ -1,0 +1,15 @@
+<div class="container card-info-yellow">
+    <div class="row">
+        <div class="modal-outer text-white m-3">
+            <p><strong>Felhasználónév: </strong>{{ commentDetails?.username }}</p>
+            <p><strong>Dátum: </strong>{{ commentDetails?.date }}</p>
+            <p><strong>Típus: </strong>{{ commentDetails?.type }}</p>
+            <p><strong>Erőforrás: </strong>{{ commentDetails?.engine }}</p>
+            <p><strong>Vélemény: </strong>
+                <p>{{ commentDetails?.usercomment }}</p>
+            <div>
+                <button (click)="emitCloseModal()" class="btn btn-danger">Bezárás</button>
+            </div>
+        </div>
+    </div>
+</div>

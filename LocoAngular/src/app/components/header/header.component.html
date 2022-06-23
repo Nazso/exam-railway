@@ -1,7 +1,7 @@
 <div class="container container-header">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand"><strong>Mozdonyok<br>Magyarországon</strong></a>
+          <a class="navbar-brand" href="#"><strong>Mozdonyok<br>Magyarországon</strong></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -11,26 +11,23 @@
                 <a class="nav-link" aria-current="page" href="#" routerLink="main">Főoldal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="electric" >Villamos mozdonyok</a>
+                <a class="nav-link" routerLink="electric" href="#">Villamos mozdonyok</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="diesel" >Dízel mozdonyok</a>
+                <a class="nav-link" routerLink="diesel" href="#">Dízel mozdonyok</a>
               </li>
               <li *ngIf="userObject" class="nav-item">
-                <a class="nav-link" routerLink="admin">Admin</a>
-              </li>
-              <li *ngIf="userObject" class="nav-item">
-                <a class="nav-link" routerLink="comments">Kommentek</a>
+                <a class="nav-link" routerLink="admin" href="#">Admin</a>
               </li>
               <li *ngIf="!userObject" class="nav-item">
-                <a class="nav-link" routerLink="">Bejelentkezés</a>
+                <a class="nav-link" routerLink="" href="#">Bejelentkezés</a>
               </li>
               <li *ngIf="userObject" class="nav-item">
-                <a class="nav-link" (click)="logout()" routerLink="">Kijelentkezés</a>
+                <a class="nav-link" (click)="logout()" routerLink="" href="#">Kijelentkezés</a>
               </li>
             </ul>
             </div>
-            <div class="user-name-holder">Hello {{userObject ? userObject.username : "user"}}!</div>
+            <div class="user-name-holder">Helló {{userObject ? userObject.username : "user"}}!</div>
         </div>
     </nav>
     <div class="header-motto d-flex">

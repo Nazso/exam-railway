@@ -19,7 +19,8 @@ const routes: Routes = [
   {path: "diesel/:id", component: CardDetailsComponent},
   {path: "admin", component: AdminComponent},
   {path: "user", component: UserRegComponent},
-  {path: "comments", component: CommentsComponent},
+  // {path: "comments", component: CommentsComponent},
+  {path: "comments/:id", component: CommentsComponent},
   {path: "", component: LoginComponent},
   {path: "**", component: NotFoundComponent}
 

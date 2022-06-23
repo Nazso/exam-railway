@@ -14,7 +14,7 @@ export class UserRegComponent implements OnInit {
   private saveUserSubscription!: Subscription;
 
   public userForm: FormGroup = new FormGroup({
-    username: new FormControl('', [Validators.required]),
+    username: new FormControl('', [Validators.required, Validators.pattern(/^[A-Za-z0-9]{5,15}$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
   })

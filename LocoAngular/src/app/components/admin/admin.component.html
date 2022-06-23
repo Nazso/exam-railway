@@ -1,1 +1,87 @@
-<p>admin works!</p>
+<div class="container">
+    <div class="row">
+        <div class="m-5">
+            <button class="btn listButton" (click)="userListVisibility()">Felhasználók</button>
+            <button class="btn listButton" (click)="buyItemListVisibility()">Vásárlások</button>
+            <button class="btn listButton" (click)="commentListVisibility()">Kommentek</button>
+            <button class="btn listButton" (click)="allListVisibility()">Összes lista</button>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngIf="userListVisible" class="container-card col-8 offset-2 mb-3">
+            <table class="table table-striped caption-top" >
+                <caption><strong>Felhasználók listája</strong></caption>
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">#</th> -->
+                    <th scope="col">Username</th>
+                    <th scope="col">email</th>
+                    <th scope="col">role</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <!-- <th scope="row">1</th> -->
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role }}</td>
+                    <!-- <td><button class="btn btn-danger" (click)="deleteOneUser(user._id)">Törlés</button></td> -->
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="buyItemListVisible" class="container-card col-8 offset-2 mb-3">    
+            <table class="table table-striped caption-top">
+                <caption><strong>Vásárlások listája</strong></caption>
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">#</th> -->
+                    <th scope="col">Username</th>
+                    <th scope="col">Típus</th>
+                    <th scope="col">Kis méret</th>
+                    <th scope="col">Közepes méret</th>
+                    <th scope="col">Nagy méret</th>
+                    <th scope="col">Végösszeg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of items">
+                    <!-- <th scope="row">1</th> -->
+                    <td>{{ item.username }}</td>
+                    <td>{{ item.type }}</td>
+                    <td>{{ item.little }}</td>
+                    <td>{{ item.middle }}</td>
+                    <td>{{ item.big }}</td>
+                    <td>{{ item.price | currency:'HUF':'symbol-narrow':'4.2-2'}}</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="commentListVisible" class="container-card col-8 offset-2 mb-3">    
+            <table class="table table-striped caption-top">
+                <caption><strong>Kommentek listája</strong></caption>
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">#</th> -->
+                    <th scope="col">Username</th>
+                    <th scope="col">Dátum</th>
+                    <th scope="col">Erőforrás</th>
+                    <th scope="col">Típus</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let comment of comments">
+                    <!-- <th scope="row">1</th> -->
+                    <td>{{ comment.username }}</td>
+                    <td>{{ comment.date }}</td>
+                    <td>{{ comment.engine }}</td>
+                    <td>{{ comment.type }}</td>
+                    <td><button class="btn btn-danger" (click)="deleteComment(comment._id)">Törlés</button></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

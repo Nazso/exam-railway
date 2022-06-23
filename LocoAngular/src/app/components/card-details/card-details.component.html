@@ -5,80 +5,63 @@
             <div class="row d-flex">
                 <div class="col-xl-8 col-md-12 container-details mb-3">
                     <img class="img-details" [src]="loco?.url" alt="Mozdony fotó">
-                    <div class="m-3">
-                        <p>Mozdony típusa: {{ loco?.type }}</p>
-                        <p>Mozdony elnevezése: {{ loco?.name }}</p>
-                        <p>Gyártó: {{ loco?.manufacturer }}</p>
-                        <p>Erőátvitel</p>
-                        <p>Max sebesség</p>
-                        <p>Rövid ismertető</p>
-                    </div>
-                    <div>
-                        <button class="btn btn-primary" (click)="backToLocos()">Vissza</button>
+                    <div class="m-3 ">
+                        <div class="d-flex justify-content-around card-info">
+                            <div class="mt-3">
+                                <p><strong>Mozdony típusa: </strong>{{ loco?.type }}</p>
+                                <p><strong>Mozdony elnevezése: </strong>{{ loco?.name }}</p>
+                                <p><strong>Gyártó: </strong>{{ loco?.manufacturer }}</p>
+                                <p><strong>Erőátvitel: </strong>{{ loco?.transmission }}</p>
+                            </div>
+                            <div class="mt-3">
+                                <p><strong>Tengelyelrendezés: </strong>{{ loco?.wheelArrangement }}</p>
+                                <p><strong>Tengelyek száma: </strong>{{ loco?.numberOfAxels }}</p>
+                                <p><strong>Max sebesség: </strong>{{ loco?.topSpeed }}</p>
+                                <p><strong>Teljesítmény: </strong>{{ loco?.power }}</p>
+                            </div>
+                        </div>
+                        <div class="card-info mt-3">
+                            <p class="m-3"><strong>Rövid ismertető: </strong></p>
+                            <p class="m-3">{{ loco?.details }}</p>
+                        </div>
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <button class="btn btn-comment m-3" href="" (click)="navigateToComment(id)">Ossza meg velünk véleményét!</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary m-3" (click)="backToLocos()">Vissza</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
-                    <app-buy-items></app-buy-items>
-                    <!-- <div class="cell-width">
-                        <div class="text-center m-3">
-                            <h3>Modellvásár!</h3>
-                            <p>A vásárláshoz kérem jelentkezzen be!</p>
+            </div>
+            <div class="col-xl-4">
+                <app-buy-items [locoId]="id"></app-buy-items>
+            </div>    
+        </div>
+        <div>
+            <div class="container-card col-10 offset-1 mb-3 card-info-yellow">    
+                <table class="table table-striped caption-top">
+                    <caption class="ms-3"><strong>Kommentek listája</strong></caption>
+                    <tbody>
+                      <tr *ngFor="let comment of comments">
+                        <div *ngIf="comment.type === loco?.type" class="d-flex justify-content-around text-white">
+                            <td >{{ comment.username }}</td>
+                            <td>{{ comment.date }}</td>
+                            <td>{{ comment.engine }}</td>
+                            <td>{{ comment.type }}</td>
+                            <td><button class="btn btn-info" (click)="openModal(comment)">Részletek</button></td>
                         </div>
-                        <table class="table">
-                            <thead>
-                              <tr>
-                           
-                                <th scope="col">Méret</th>
-                                <th scope="col">Darabszám</th>
-                                <th scope="col">Összeg</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                              
-                                <td>Kis méret</td>
-                                <td>
-                                    <input type="text" value="{{ itemsLittle }}">
-                                    <span class="plus" (click)="riseNumberLittle()"> + </span>
-                                    <span class="minus" (click)="decreaseNumberLittle()"> - </span>
-                                </td>
-                                <td class="col-3">{{ priceOfLittleModels }} HUF</td>
-                              </tr>
-                              <tr>
-                              
-                                <td>Közepes méret</td>
-                                <td>
-                                    
-                                        <input type="text" value="{{ itemsMiddle }}">
-                                        <span class="plus" (click)="riseNumberMiddle()"> + </span>
-                                        <span class="minus" (click)="decreaseNumberMiddle()"> - </span>
-            
-                                </td>
-                                    <td class="col-3">{{ priceOfMiddleModels }} HUF</td>
-                              </tr>
-                              <tr>
-                              
-                                <td>Nagy méret</td>
-                                <td>
-                                    <input type="text" value="{{ itemsBig }}">
-                                    <span class="plus" (click)="riseNumberBig()"> + </span>
-                                    <span class="minus" (click)="decreaseNumberBig()"> - </span>
-                                </td>
-                                <td class="col-3">{{ priceOfBigModels }} HUF</td>
-                              </tr>
-                             
-                            </tbody>
-                          </table>
-                          <div>
-                              <p class="sum"><strong>Vásárlás végösszege: {{ priceSum }} HUF</strong></p>
-                          </div>
-                          <div>
-                              <button class="btn btn-danger m-3">Vásárlás</button>
-                          </div>
-                    </div>
-                </div> -->
-
+                      </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+        <div class="container">
+            <app-comment-details
+            *ngIf="commentDetailsIsVisible"
+            [commentDetails] = "detailedComment"
+            (closeModal) = "closeModal()"></app-comment-details>
+        </div>
+    </div>
     </div>
 </div>

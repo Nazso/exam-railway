@@ -21,6 +21,7 @@ import { CardDetailsElectricComponent } from './components/card-details-electric
 import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserRegComponent } from './components/user-reg/user-reg.component';
+import { CommentDetailsComponent } from './components/comments/comment-details/comment-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UserRegComponent } from './components/user-reg/user-reg.component';
     CardDetailsElectricComponent,
     AdminComponent,
     LoginComponent,
-    UserRegComponent
+    UserRegComponent,
+    CommentDetailsComponent
   ],
   imports: [
     BrowserModule,

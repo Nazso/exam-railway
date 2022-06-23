@@ -3,5 +3,13 @@ export interface DieselModel {
     type: string,
     name: string,
     url: string,
-    manufacturer: string
+    manufacturer: string,
+    wheelArrangement: string,
+    numberOfAxels: number,
+    engine: string,
+    topSpeed: string,
+    power: string,
+    transmission: string,
+    cylinderArrangement: string,
+    details: string
 }
