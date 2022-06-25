@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const BuyItemSchema = new mongoose.Schema({
-    id: String,
+    // id: String,
     username: String,
     type: String,
     little: Number,

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { UserLogin } from '../models/user-login.model'
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable} from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { LoggedInUser } from '../models/logged-in-user.model';
 
 
@@ -16,7 +17,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  public login(loginData: UserLogin): Observable<LoggedInUser> {
+  public login (loginData: UserLogin): Observable<LoggedInUser> {
     return this.http.post<LoggedInUser>(this.BASE_URL + 'login', loginData)
       .pipe(
         tap({
@@ -94,4 +95,10 @@ export class AuthService {
     return this.userLoggedInObject.asObservable();
   };
 
-}
+  public get userObjectValue() {
+
+    return this.userLoggedInObject.value
+
+  };
+
+};

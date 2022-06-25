@@ -1,0 +1,10 @@
+{
+    "port": 3000,
+    "log_level_file": "info",
+    "log_level_console": "debug",
+    "database": {
+        "user": "NagyZsolt",
+        "password": "Stratocaster76",
+        "host": "cluster0.asejk.mongodb.net/locomotives?retryWrites=true&w=majority"
+    }
+}

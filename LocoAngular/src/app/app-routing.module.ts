@@ -10,17 +10,19 @@ import { CardDetailsElectricComponent } from './components/card-details-electric
 import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserRegComponent } from './components/user-reg/user-reg.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { RoleGuardService } from './services/role-guard.service';
 
 const routes: Routes = [
   {path: "main", component: MainComponent},
   {path: "electric", component: ElectricComponent},
-  {path: "electric/:id", component: CardDetailsElectricComponent},
+  {path: "electric/:id", component: CardDetailsElectricComponent, canActivate: [AuthGuardService]},
   {path: "diesel", component: DieselComponent},
-  {path: "diesel/:id", component: CardDetailsComponent},
-  {path: "admin", component: AdminComponent},
+  {path: "diesel/:id", component: CardDetailsComponent, canActivate: [AuthGuardService]},
+  {path: "admin", component: AdminComponent, canActivate: [RoleGuardService]},
   {path: "user", component: UserRegComponent},
   // {path: "comments", component: CommentsComponent},
-  {path: "comments/:id", component: CommentsComponent},
+  {path: "comments/:id", component: CommentsComponent, canActivate: [AuthGuardService]},
   {path: "", component: LoginComponent},
   {path: "**", component: NotFoundComponent}
 

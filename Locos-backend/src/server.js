@@ -12,6 +12,9 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
+const authenticationByJWT = require('./auth/authenticate');
+const adminRoleHandler = require('./auth/adminOnly');
+
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 // mongoose.set('useFindAndModify', false);
@@ -72,8 +75,8 @@ app.post('/logout', authHandler.logout);
 app.use('/user', userRoutes);
 app.use('/diesel', dieselRoutes);
 app.use('/electric', electricRoutes);
-app.use('/comment', commentRoutes);
-app.use('/buyitem', buyItemRoutes);
+app.use('/comment', authenticationByJWT, commentRoutes);
+app.use('/buyitem', authenticationByJWT, buyItemRoutes);
 
 //hibakezelő midleware
 app.use((err, req, res, next) => {

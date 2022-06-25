@@ -16,7 +16,7 @@
               <li class="nav-item">
                 <a class="nav-link" routerLink="diesel" href="#">Dízel mozdonyok</a>
               </li>
-              <li *ngIf="userObject" class="nav-item">
+              <li *ngIf="userObject && userObject.role === 'admin'" class="nav-item">
                 <a class="nav-link" routerLink="admin" href="#">Admin</a>
               </li>
               <li *ngIf="!userObject" class="nav-item">

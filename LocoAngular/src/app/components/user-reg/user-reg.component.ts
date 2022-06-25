@@ -16,7 +16,7 @@ export class UserRegComponent implements OnInit {
   public userForm: FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.pattern(/^[A-Za-z0-9]{5,15}$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required])
+    password: new FormControl('', [Validators.required, Validators.pattern(/^[A-Za-z0-9]{4,15}$/)])
   })
 
   constructor(private userService: UserService, private router: Router) { }

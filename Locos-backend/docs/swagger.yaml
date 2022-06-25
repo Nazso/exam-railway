@@ -1,0 +1,622 @@
+openapi: 3.0.0
+info:
+  title: REMEK - fullstack application
+  version: 1.0.0
+  description: A fullstack application for the final exam
+servers:
+  - url: http://localhost:3000
+paths:
+  /diesel:
+    get:
+      summary: Returns a list of diesel locomotives
+      tags:
+        - Diesel
+      responses:
+        '200':
+          description: List of locomotives returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Diesel'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /diesel/{id}:
+    get:
+      summary: Returns a diesel locomotive
+      tags:
+        - Diesel
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: A locomotive returned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Diesel'
+        '404':
+          description: Locomotive with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /electric:
+    get:
+      summary: Returns a list of electric locomotives
+      tags:
+        - Electric
+      responses:
+        '200':
+          description: List of locomotives returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Electric'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /electric/{id}:
+    get:
+      summary: Returns an electric locomotive
+      tags:
+        - Electric
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: A locomotive returned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Electric'
+        '404':
+          description: Locomotive with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /comment:
+    get:
+      summary: Returns a list of comments
+      tags:
+        - Comment
+      responses:
+        '200':
+          description: List of comments returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comment'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Creates a new comment
+      tags:
+        - Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Comment'   
+      responses:
+        '201':
+          description: Comment has been created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Comment'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+  /comment/{id}:
+    get:
+      summary: Returns a comment
+      tags:
+        - Comment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: A comment returned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Comment'
+        '404':
+          description: Comment with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+    delete:
+      summary: Removes a comment
+      tags:
+        - Comment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: A comment has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Comment'
+        '404':
+          description: Comment with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /buyitem:
+    get:
+      summary: Returns a list of buying
+      tags:
+        - BuyItems
+      responses:
+        '200':
+          description: List of buying returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BuyItems'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Creates a new buying
+      tags:
+        - BuyItems
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BuyItems'  
+      responses:
+        '201':
+          description: Buying has been created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/BuyItems'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+  /buyitem/{id}:
+    get:
+      summary: Returns an item
+      tags:
+        - BuyItems
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: An item returned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/BuyItems'
+        '404':
+          description: Item with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+    delete:
+      summary: Removes an item
+      tags:
+        - BuyItems
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: An item has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/BuyItems'
+        '404':
+          description: Item with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /user:
+    get:
+      summary: Returns a list of users
+      tags:
+        - Users
+      responses:
+        '200':
+          description: List of users returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Creates a new user
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'  
+      responses:
+        '201':
+          description: User has been created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+  /user/{id}:
+    get:
+      summary: Returns a user
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: A user returned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/User'
+        '404':
+          description: User with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+    delete:
+      summary: Removes a user
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: A user has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/User'
+        '404':
+          description: User with id  doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'          
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+
+tags:
+  - name: Diesel
+    description: Access the diesels
+  - name: Electric
+    description: Access the electrics
+  - name: Comment
+    description: Access the comments
+  - name: BuyItems
+    description: Access the items
+  - name: Users
+    description: Access the users
+components:
+  schemas:
+    Diesel:
+      type: object
+      required:
+        - type
+        - name
+        - url
+        - manufacturer
+        - wheelArrangement
+        - numberOfAxels
+        - engine
+        - topSpeed
+        - power
+        - transmission
+        - cylinderArrangement
+        - details
+      properties:
+        type:
+          type: string
+        name:
+          type: string
+        url:
+          type: string
+        manufacturer:
+          type: string
+        wheelArrangement:
+          type: string
+        numberOfAxels:
+          type: number
+        engine:
+          type: string
+        topSpeed:
+          type: string
+        power:
+          type: string
+        transmission:
+          type: string
+        cylinderArrangement:
+          type: string
+        details:
+          type: string
+    Electric:
+      type: object
+      required:
+        - type
+        - name
+        - url
+        - manufacturer
+        - wheelArrangement
+        - numberOfAxels
+        - engine
+        - topSpeed
+        - power
+        - typeOfElectricity
+        - details
+      properties:
+        type:
+          type: string
+        name:
+          type: string
+        url:
+          type: string
+        manufacturer:
+          type: string
+        wheelArrangement:
+          type: string
+        numberOfAxels:
+          type: number
+        engine:
+          type: string
+        topSpeed:
+          type: string
+        power:
+          type: string
+        typeOfElectricity:
+          type: string
+        details:
+          type: string
+    Comment:
+      type: object
+      required:
+        - username
+        - date
+        - type
+        - engine
+        - name
+        - usercomment
+      properties:
+        username:
+          type: string
+        type:
+          type: string
+        name:
+          type: string
+        engine:
+          type: string
+        date:
+          type: string
+        usercomment:
+          type: string
+    BuyItems:
+      type: object
+      required:
+        - username
+        - type
+        - little
+        - middle
+        - big
+        - price
+      properties:
+        username:
+          type: string
+        type:
+          type: string
+        little:
+          type: number
+        middle:
+          type: number
+        big:
+          type: number
+        price:
+          type: number
+    Token:
+      type: object
+      required:
+        - token
+      properties:
+        token:
+          type: string
+    User:
+      type: object
+      required:
+        - username
+        - email
+        - password
+        - role
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: number
+        role:
+          type: number
+    Error:
+      type: object
+      required:
+        - message
+        - has_error
+      properties:
+        message:
+          type: string
+        has_error:
+          type: boolean

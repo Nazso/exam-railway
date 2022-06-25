@@ -13,18 +13,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public userObject: any;
   private userSignInSubscription!: Subscription;
   private userRefreshSubscription!: Subscription;
-
+  
   constructor(private authService: AuthService, private router: Router) { }
-
+  
   ngOnInit(): void {
     this.userSignInSubscription = this.authService.getUserLoggedInObject().subscribe(
-      user => this.userObject = user
-    );
-
-    if(localStorage.getItem('refreshToken')) {
-      this.userRefreshSubscription = this.authService.refreshUserAuthentication().subscribe();
-    };
-  }
+      user => this.userObject = user,
+      );
+      
+      if(localStorage.getItem('refreshToken')) {
+        this.userRefreshSubscription = this.authService.refreshUserAuthentication().subscribe();
+      };
+    }
 
   ngOnDestroy(): void {
     if(this.userSignInSubscription) this.userSignInSubscription.unsubscribe();

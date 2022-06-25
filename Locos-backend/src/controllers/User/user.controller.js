@@ -46,9 +46,7 @@ exports.getUserById = (req, res, next) => {
 
     return userService.findById(id)
         .then(user => {
-            if (!user) {
-                return next(new createError[500](`Could not send person by id:${req.params.id}`));
-            }
+            if (!user)  return next(new createError.NotFound(`Could not send person by id:${req.params.id}`));
 
             res.json(user)
         })
