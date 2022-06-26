@@ -1,25 +1,97 @@
-# fsapi-remek-assignment
+# Mozdony ismertető alkalmazás
+Eredeti szakmám segítették a témaválasztást a vizsgamunka elkészítéséhez. Az alkalmazás a magyar vasútvonalakon futott és futó mozdonyokról ad egy rövid áttekintést a teljesség igénye nélkül. A mozdonyok műszaki adatainak bemutatása és rövid történeti ismertetése mellett a regisztrált és bejelentkezett felhasználó 3 féle méretben modelleket vásárolhat a kiválasztott típusból, valamint kommentekkel visszajelzéseket adhat, véleményt formálhat, illetve kiegészítésekkel bővítheti az ismereteket.
 
-## A vizsgaremek elkészítésének folyamata:
+# Felhasználói adatok belépéshez
+## Felhasználó 'user' szereppel:
+- username: Zsolt
+- password: teszt
 
-1. A tanuló választ egy témát és röviden összefoglalja. (cím, megvalósítás lépései). 1. hét
-2. Az oktatók jóváhagyják a választott témát (esetleg kérnek módosításokat). 2. hét
-3. A tanuló megkezdi a vizsgaremek kivitelezését. 3. hét
-4. Az oktatók figyelemmel kísérik az előrehaladást. 4. - 10. hét
-5. A megadott határidőig a meghatározott formában a vizsgaremek beadásra kerül. 10. hét
+## Felhasználó 'admin' szereppel:
+- username: YodaOne
+- password: teszt
 
-Az alkalmazás adminisztrációs rendszer legyen (sablon használható).
+# Entitások
+## Felhasználók
+Egy látogató, aki regisztrálhat, bejelentkezhet, a mozdonyok részleteit megtekintheti, modelleket vásárolhat, kommenteket írhat, valamint mások kommentjeit olvashatja.
 
-## Követelmények:
-- MongoDB alapú, NoSQL - legalább 3 féle entitás legyen (pl.: termék, rendelés, vásárló).
-- NodeJS API, saját maga által leprogramozott API szolgálja ki a frontendet - legalább 5
-különböző végpont legyen (pl.: api/user, api/product, api/order …).
-- Frontend Angular/React alapú - legalább 5 külön oldal legyen, model-service-component
-architektúra, Bootstrap/Material vagy egyéb sablon használata engedélyezett, reszponzív
-legyen. A felület bizonyos oldalai csak belépés után legyenek elérhetőek (JWT autentikáció).
-- Clean kód elveit kövesse az alkalmazás összes eleme.
-- Minden API útvonalhoz legalább egy tesztet kell írni. Legalább 1-1 Unit/Integrációs teszt.
-- Swagger alapú dokumentáció az API-hoz.
-- Markdown dokumentáció a repository-ban, tartalmazza az alkalmazás telepítését,
-konfigurálását, célját.
-- Dockerizálva legyen a kész alkalmazás, konténerből legyen futtatható.
+## Dízel mozdonyok
+Dízel üzemű vontató járművek, amelyek megtekinthetőek listában és részletesen is.
+
+## Villamos mozdonyok
+Villamos üzemű vontató járművek, amelyek megtekinthetőek listában és részletesen is.
+
+## Kommentek
+A regisztrált és bejelentkezett felhasználók véleményei, észrevételei és kiegészítései.
+
+## Modell vásárlás
+A regisztrált és bejelentkezett felhasználók a kiválasztott mozdony típusból 3 féle méretben vásárolhatnak modelleket.
+
+# User story lista, feladatok
+A felhasználó regisztrál és belép az alkalmazásba
+
+- Regisztrációs képernyő megvalósítása
+- regisztrációs végpont implementálása
+- Login képernyő megvalósítása
+- login végpont implementálása
+- JWT autentikáció implementáció, kliens oldali hozzáférés szabályozása autentikáció alapján
+- A felhasználó jegyet vásárol
+
+Dízel vagy villamos üzemű mozdony kiválasztása, részletek
+- Főoldalról a két mozdonyfajta kiválasztása (képre, feliratra kattintva vagy navigációs menüvel)
+- Két aloldalon a villamos és a dízel üzemű mozdonyok kilistázása (GET/electric és GET/diesel)
+- A listában szereplő kártyákon megjelenő gombra kattintva a kiválasztott mozdony részleteinek megtekintése (GET/electric/:id és GET/diesel/:id)
+
+Komment írása, olvasása
+- A mozdonyt részletező oldalról lehet új komment írást kezdeményezni
+- A form-ban a bejelentkezett felhasználó és a kiválasztott mozdony szükséges adatai betöltődnek
+- A betöltött adatok nem módosíthatók (readonly)
+- A komment form mezőit kitöltve van lehetőség új komment mentésére (POST/comments)
+- Az aktuális mozdonytípusnál megjelenik a mentett komment (GET/comments)
+- A komment lsitában a "Részletek" gombra kattintva elolvasható a komment tartalma(GET/comments/:id)
+- A listából az Admin oldalon 'admin' szereppel rendelkező felhasználó törölheti az elemeket (DELETE/comments/:id)
+
+Modell vásárlás
+- A mozdonyt részletező oldalról lehet új vásárlást kezdeményezni
+- A form-ban a bejelentkezett felhasználó és a kiválasztott mozdony szükséges adatai betöltődnek
+- A betöltött adatok nem módosíthatók (readonly)
+- Az input mezők kitöltése után rögzíthető a vásárlás (POST/buyItems)
+- Az Admin oldalon 'admin' szereppel rendelkező felhasználó megtekintheti a kilistázott tételeket (GET/buyItems)
+
+# Képernyők
+## Regisztráció
+A felhasználó létrehozhatja a felhasználói fiókját felhasználónév, e-mail, jelszó megadásával.
+
+## Bejelentkezés
+A felhasználó bejelentkezhet felhasználónév és jelszó megadásával.
+
+## Főoldal
+Két fotó jelenik meg egy-egy dízel és villamos üzemű mozdonyról. A képre vagy az alatta levő feliratra kattintva lehet továbblépni a mozdonyok kilistázásához.
+
+## Mozdonyok listázása
+A főoldalon kiválasztott mozdony fajtának az egyes típusai jelennek meg kártyákon. Az ott megjelenő gombokkal lehet megtekinteni a részleteket.
+
+## Mozdonyok részletes megtekintése
+A regisztrált és bejelentkezett felhasználók itt tekinthetik meg a mozdony részletes adatait, továbbá innét van lehetőség modell vásárlásra és a komment formra történő navigálásra.
+
+## Komment form
+A regisztrált és bejelentkezett felhasználók az itt megjelenő form-on írhatnak új kommentet.
+
+## Admin oldal
+A regisztrált, bejelentkezett, 'admin' szereppel rendelkező felhasználó itt megtekintheti a felhasználók, bevásárlások és kommentek listáját. A kommentek közül lehetőség van törlésre.
+
+# API végpontok
+- POST/login            - felhasználó bejelentkezés
+- POST/refresh          - bejelentkezés fenntartása
+- POST/logout           - felhasználó kijelentkezés
+- GET/diesel            - dízel mozdonyok kilistázása
+- GET/diesel/:id        - egy mozdony típus lekérdezése
+- GET/electric          - villamos mozdony kilistázása
+- GET/electric/:id      - egy mozdony típus lekérdezése
+- POST/comment          - új komment mentése
+- GET/comment           - kommentek listázása
+- GET/comment/:id       - egy komment megjelenítése
+- DELETE/comment/:id    - komment törlése
+- POST/buyItem          - vásárlás mentése
+- GET/buyItem           - vásárlások lekérdezése
+- POST/user             - felhasználók mentése (regisztráció)
+- GET/user              - felhasználók listázása
