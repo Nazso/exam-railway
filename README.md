@@ -80,18 +80,20 @@ A regisztrált és bejelentkezett felhasználók az itt megjelenő form-on írha
 A regisztrált, bejelentkezett, 'admin' szereppel rendelkező felhasználó itt megtekintheti a felhasználók, bevásárlások és kommentek listáját. A kommentek közül lehetőség van törlésre.
 
 # API végpontok
-- POST/login            - felhasználó bejelentkezés
-- POST/refresh          - bejelentkezés fenntartása
-- POST/logout           - felhasználó kijelentkezés
-- GET/diesel            - dízel mozdonyok kilistázása
-- GET/diesel/:id        - egy mozdony típus lekérdezése
-- GET/electric          - villamos mozdony kilistázása
-- GET/electric/:id      - egy mozdony típus lekérdezése
-- POST/comment          - új komment mentése
-- GET/comment           - kommentek listázása
-- GET/comment/:id       - egy komment megjelenítése
-- DELETE/comment/:id    - komment törlése
-- POST/buyItem          - vásárlás mentése
-- GET/buyItem           - vásárlások lekérdezése
-- POST/user             - felhasználók mentése (regisztráció)
-- GET/user              - felhasználók listázása
+|Végpont|funkció|
+|:---|:---|
+|POST/login|felhasználó bejelentkezés|
+|POST/refresh|bejelentkezés fenntartása|
+|POST/logout|felhasználó kijelentkezés|
+|GET/diesel|dízel mozdonyok kilistázása|
+|GET/diesel/:id|egy mozdony típus lekérdezése|
+|GET/electric|villamos mozdony kilistázása|
+|GET/electric/:id|egy mozdony típus lekérdezése|
+|POST/comment|új komment mentése|
+|GET/comment|kommentek listázása|
+|GET/comment/:id|egy komment megjelenítése|
+|DELETE/comment/:id|komment törlése|
+|POST/buyItem|vásárlás mentése|
+|GET/buyItem|vásárlások lekérdezése|
+|POST/user|felhasználók mentése (regisztráció)|
+|GET/user|felhasználók listázása|
