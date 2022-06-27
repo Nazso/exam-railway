@@ -8,3 +8,4 @@
         "host": "cluster0.asejk.mongodb.net/locomotives?retryWrites=true&w=majority"
     }
 }
+

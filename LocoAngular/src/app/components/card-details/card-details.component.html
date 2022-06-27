@@ -44,8 +44,8 @@
                     <caption class="ms-3"><strong>Kommentek listája</strong></caption>
                     <tbody>
                       <tr *ngFor="let comment of comments">
-                        <div *ngIf="comment.type === loco?.type" class="d-flex justify-content-around text-white">
-                            <td >{{ comment.username }}</td>
+                        <div *ngIf="comment.type === loco?.type" class="d-flex justify-content-between text-white">
+                            <td>{{ comment.username }}</td>
                             <td>{{ comment.date }}</td>
                             <td>{{ comment.engine }}</td>
                             <td>{{ comment.type }}</td>

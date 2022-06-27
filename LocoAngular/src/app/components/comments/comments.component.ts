@@ -47,7 +47,6 @@ export class CommentsComponent implements OnInit, OnDestroy {
     this.userSignInSubscription = this.authService.getUserLoggedInObject().subscribe(
       user => this.uObject = user
       )
-      console.log(this.uObject)
 
     this.ar.paramMap.subscribe({
       next: (param) => {
@@ -57,25 +56,18 @@ export class CommentsComponent implements OnInit, OnDestroy {
       complete: () => {}
     })
 
-    console.log(this.id)
-
     this.dieselService.getOneDiesel(this.id).subscribe({
       next: (data) => {
         this.commentForm.patchValue(data)
         this.dataC = data
-        console.log(data);
       },
       error: (err) => {console.error(err)},
       complete: () => {},
     })
 
-    console.log(this.dataC);
-
-
     this.electricService.getOneElectric(this.id).subscribe({
       next: (data) => {
         this.commentForm.patchValue(data)
-        console.log(data);
       },
       error: (err) => {console.error(err)},
       complete: () => {},
@@ -87,7 +79,6 @@ export class CommentsComponent implements OnInit, OnDestroy {
   }
 
   public saveComment() {
-    console.log(this.commentForm.value);
     const observable = this.commentService.saveComment(this.commentForm.value);
     this.saveCommentSubscription = observable.subscribe({
       next: (data) => {console.log(data)},

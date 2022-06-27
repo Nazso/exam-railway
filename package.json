@@ -29,7 +29,9 @@
     "mongoose-id-validator": "^0.6.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.16",
-    "winston": "^3.7.2"
+    "swagger-ui-express": "^4.4.0",
+    "winston": "^3.7.2",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "jest": "^28.1.1",

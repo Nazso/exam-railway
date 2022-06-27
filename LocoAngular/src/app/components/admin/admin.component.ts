@@ -5,6 +5,7 @@ import { CommentService } from '../../services/comment.service';
 import { User } from 'src/app/models/user.model';
 import { BuyItem } from 'src/app/models/buyItem.model';
 import { Comment } from 'src/app/models/comment-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -24,14 +25,14 @@ export class AdminComponent implements OnInit {
   constructor(
     private userService: UserService,
     private buyItemService: BuyItemService,
-    private commentService: CommentService
+    private commentService: CommentService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe({
       next: (users: User[]) => {
         this.users = users
-        console.log(this.users);
       },
       error: (err) => {console.log(err)},
       complete: () => {console.log('User request is done!')}
@@ -40,7 +41,6 @@ export class AdminComponent implements OnInit {
     this.buyItemService.getItems().subscribe({
       next: (items: BuyItem[]) => {
         this.items = items
-        console.log(this.items);
       },
       error: (err) => {console.log(err)},
       complete: () => {console.log('Item request is done!')}
@@ -48,8 +48,7 @@ export class AdminComponent implements OnInit {
     
     this.commentService.getComment().subscribe({
       next: (comments: Comment[]) => {
-        this.comments = comments
-        console.log(this.comments);
+        this.comments = comments;
       },
       error: (err) => {console.log(err)},
       complete: () => {console.log('Item request is done!')}
@@ -84,7 +83,9 @@ export class AdminComponent implements OnInit {
     this.commentService.deleteOneComment(id).subscribe({
       next: (data) => {console.log(data)},
       error: (e) => {console.log(e)},
-      complete: () => {console.log(`Comment deleted with: ${id}`)}
+      complete: () => {
+        console.log(`Comment deleted with: ${id}`
+        )}
     })
   }
 

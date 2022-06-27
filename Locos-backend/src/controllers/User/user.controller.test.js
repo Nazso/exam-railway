@@ -33,9 +33,7 @@ describe('User controller test', () => {
     beforeEach(() => {
         userService.__setMockData(mockData);
 
-        response = mockResponse();
-        nextFunction = jest.fn();
-    })
+    });
     
     test('findOne() with valid id', () => {
         const USER_ID = "62b5ea08e7c05b42a74fd735";
@@ -44,13 +42,15 @@ describe('User controller test', () => {
             params: {
                 id: USER_ID
             }
-        });
-        
+        })
+
+        response = mockResponse();
+        nextFunction = jest.fn();
 
         return userController.getUserById(request, response, nextFunction)
             .then(() => {
                 expect(userService.findById).toBeCalledWith(USER_ID)
-                // expect(response.json).toBeCalledWith(mockData.find(user => user.id === USER_ID));
+                expect(response.json).toBeCalledWith(mockData.find(item => item.id === USER_ID));
             })
 
     })
@@ -70,7 +70,7 @@ describe('User controller test', () => {
         return userController.getUserById(request, response, nextFunction)
             .then(() => {
                 expect(userService.findById).toBeCalledWith(INVALID_USER_ID)
-                // expect(nextFunction).toBeCalledWith(new createError.NotFound(`Could not send person by id:${INVALID_USER_ID}`))
+                expect(nextFunction).toBeCalledWith(new createError.NotFound(`Could not send person by id:${INVALID_USER_ID}`))
             })
 
     })

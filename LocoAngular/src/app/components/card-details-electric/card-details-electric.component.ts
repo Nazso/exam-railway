@@ -38,17 +38,14 @@ export class CardDetailsElectricComponent implements OnInit, OnDestroy {
     this.subs = this.ar.paramMap.subscribe(
       param => this.id = param.get('id')
     )
-    console.log(this.id);
 
     this.locoSubs = this.electricService.getOneElectric(this.id).subscribe(
       (loco: ElectricModel) => this.loco = loco
     )
-    console.log(this.loco);
 
     this.commentService.getComment().subscribe({
       next: (comments: Comment[]) => {
         this.comments = comments
-        console.log(this.comments);
       },
       error: (err) => {console.log(err)},
       complete: () => {}
@@ -67,7 +64,6 @@ export class CardDetailsElectricComponent implements OnInit, OnDestroy {
   public openModal(comment: Comment) {
     this.detailedComment = comment;
     this.commentDetailsIsVisible = true;
-    console.log(comment);
   }
 
   public closeModal(): void {

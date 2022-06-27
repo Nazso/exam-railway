@@ -4,6 +4,7 @@ $background_cards: rgb(119, 205, 245);
 
 .img_card {
     width: 100%;
+    height: 250px;
 }
 
 .card-style {
@@ -12,4 +13,8 @@ $background_cards: rgb(119, 205, 245);
     border: 3px solid yellow;
     border-radius: 5px;
     margin-bottom: 10px;
+    &:hover {
+        box-shadow: 5px 5px 5px 5px black;
+
+    }
 }

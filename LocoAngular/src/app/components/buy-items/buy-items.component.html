@@ -9,17 +9,17 @@
 
         <div class="m-3">
           <div class="d-flex justify-content-between">
-            <label for="username">Felhasználónév:</label>
-            <input type="text" name="username" [(ngModel)]="userObject.username" value="" class="form-control"
-              id="username">
+            <label>Felhasználónév:</label>
+            <input type="text" name="username" [(ngModel)]="userObject.username" class="form-control"
+              id="username" readonly>
           </div>
         </div>
         <hr>
 
         <div class="m-3">
           <div class="d-flex">
-            <label class="" for="type">Típus:</label>
-            <span [(ngModel)]="loco.type" name="type" class="ms-3">{{ loco.type }}</span>
+            <label>Típus:</label>
+            <input type="text" name="type" [(ngModel)]="loco.type" value="" class="form-control" readonly>
           </div>
         </div>
         <hr>
@@ -29,7 +29,7 @@
           <div class="d-flex m-3">
             <span>Mennyiség(db): </span>
             <input (change)="valueChangedLittle($event)" name="littleModel" ngModel required type="number" min="0"
-              max="10" value="" class="form-control ms-3" id="littleModel">
+              max="10" value="0" class="form-control ms-3" id="littleModel">
           </div>
           <span class="m-3">Ár: {{ priceOfLittleModels }} HUF</span>
         </div>
@@ -40,7 +40,7 @@
           <div class="d-flex m-3">
             <span>Mennyiség(db): </span>
             <input (change)="valueChangedMid($event)" name="middleModel" ngModel required type="number" min="0" max="10"
-              value="" class="form-control ms-3" id="middleModel">
+              value="0" class="form-control ms-3" id="middleModel">
           </div>
           <span class="m-3">Ár: {{ priceOfMiddleModels }} HUF</span>
         </div>
@@ -51,7 +51,7 @@
           <div class="d-flex m-3">
             <span>Mennyiség(db): </span>
             <input (change)="valueChangedBig($event)" name="bigModel" ngModel required type="number" min="0" max="10"
-              value="" class="form-control ms-3" id="bigModel">
+              value="0" class="form-control ms-3" id="bigModel">
           </div>
           <span class="m-3">Ár: {{ priceOfBigModels }} HUF</span>
           <hr>

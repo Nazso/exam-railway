@@ -18,7 +18,6 @@ export class CardComponent implements OnInit {
     this.electricService.getElectric().subscribe({
       next: (locos: ElectricModel[]) => {
         this.locos = locos
-        console.log(this.locos);
       },
       error: (err) => {console.log(err)},
       complete: () => {console.log('Loc request is done!')}

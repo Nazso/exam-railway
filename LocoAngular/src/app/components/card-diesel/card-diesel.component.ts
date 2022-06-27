@@ -20,7 +20,6 @@ export class CardDieselComponent implements OnInit {
     this.dieselService.getDiesel().subscribe({
       next: (locos: DieselModel[]) => {
         this.locos = locos
-        console.log(this.locos);
       },
       error: (err) => {console.log(err)},
       complete: () => {console.log('Loc request is done!')}

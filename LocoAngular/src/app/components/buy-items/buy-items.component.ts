@@ -8,6 +8,7 @@ import { BuyItemService } from 'src/app/services/buy-item.service';
 import { Subscription } from 'rxjs';
 import { ElectricModel } from 'src/app/models/electric.model';
 import { ElectricService } from 'src/app/services/electric.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-buy-items',
@@ -24,16 +25,17 @@ export class BuyItemsComponent implements OnInit, OnDestroy {
   // public locoType: string = this.loco.type;
   public username = "";
   public loco: any;
+  public id: any;
   
-  public priceOfLittleModels = 0;
-  public priceOfMiddleModels = 0;
-  public priceOfBigModels = 0;
+  public priceOfLittleModels: number = 0;
+  public priceOfMiddleModels: number = 0;
+  public priceOfBigModels: number = 0;
   
-  public itemsLittle = 0;
-  public itemsMiddle = 0;
-  public itemsBig = 0;
+  public itemsLittle: number = 0;
+  public itemsMiddle: number = 0;
+  public itemsBig: number = 0;
 
-  public priceSum = 0;
+  public priceSum: number = 0;
 
   public userObject: any;
 
@@ -51,21 +53,42 @@ export class BuyItemsComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private dieselService: DieselService,
     private electricService: ElectricService,
-    private buyItemService: BuyItemService) { }
+    private buyItemService: BuyItemService,
+    private ar: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    console.log(this.locoId)
-    this.userSignInSubscription = this.authService.getUserLoggedInObject().subscribe(
-      user => this.userObject = user
+    this.userSignInSubscription = this.authService.getUserLoggedInObject().subscribe({
+      next: ((user) => {this.userObject = user}),
+      error: (() => {}),
+      complete: (() => {})
+  })
+
+  this.ar.paramMap.subscribe({
+    next: (param) => {
+      this.id = param.get('id')
+    },
+    error: (err) => {console.error(err)},
+    complete: () => {}
+  })
+
+    this.dieselService.getOneDiesel(this.locoId).subscribe({
+      next: ((loco: any) => {
+        this.loco = loco
+      }),
+      error: (() => {}),
+      complete: (() => {})
+
+    }
     )
 
-    this.dieselService.getOneDiesel(this.locoId).subscribe(
-      (loco: DieselModel) => this.loco = loco
-    )
-
-    this.electricService.getOneElectric(this.locoId).subscribe(
-      (loco: ElectricModel) => this.loco = loco
-    )
+    this.electricService.getOneElectric(this.locoId).subscribe({
+      next:((loco: any) => {
+        this.loco = loco
+      }),
+      error: (() => {}),
+      complete: (() => {})
+  })
   }
 
   ngOnDestroy(): void {
@@ -92,17 +115,14 @@ export class BuyItemsComponent implements OnInit, OnDestroy {
 
   public itemsPriceLittle() {
     this.priceOfLittleModels = this.itemsLittle * 2000;
-    console.log(this.priceOfLittleModels);
   }
 
   public itemsPriceMiddle() {
     this.priceOfMiddleModels = this.itemsMiddle * 4000;
-    console.log(this.priceOfMiddleModels);
   }
 
   public itemsPriceBig() {
     this.priceOfBigModels = this.itemsBig * 6000;
-    console.log(this.priceOfBigModels);
   }
 
   sum() {
@@ -110,7 +130,6 @@ export class BuyItemsComponent implements OnInit, OnDestroy {
   }
 
   public saveBuyItem(buyItemForm: NgForm) {
-    console.log(buyItemForm.value)
     const observable = this.buyItemService.saveBuyItem(buyItemForm.value);
     this.saveBuyItemSubscription = observable.subscribe({
       next: (data) => {console.log(data)},

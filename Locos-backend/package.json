@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "docker:build": "docker build -t remek-api:latest .",
+    "docker:run": "docker run -p 3000:3000 remek-api",
+    "docker:compose": "docker compose up"
   },
   "repository": {
     "type": "git",
@@ -29,7 +32,9 @@
     "mongoose-id-validator": "^0.6.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.16",
-    "winston": "^3.7.2"
+    "swagger-ui-express": "^4.4.0",
+    "winston": "^3.7.2",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "jest": "^28.1.1",

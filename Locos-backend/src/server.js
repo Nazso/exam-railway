@@ -8,6 +8,9 @@ const commentRoutes = require('./controllers/Comment/comment.routes');
 const buyItemRoutes = require('./controllers/BuyItems/buyItems.routes');
 const userRoutes = require('./controllers/User/user.routes');
 const cors = require('cors');
+const YAML = require('yamljs');
+const swaggerUI = require('swagger-ui-express');
+const config = require('config');
 
 const app = express();
 app.use(cors());
@@ -17,32 +20,20 @@ const adminRoleHandler = require('./auth/adminOnly');
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-// mongoose.set('useFindAndModify', false);
 
-const connectionString = process.env.DB_CONNECTION;
-console.log(process.env.PORT);
-// console.log(connectionString);
+// const connectionString = process.env.DB_CONNECTION;
+// const connectionString = `mongodb://${config.database.host}`;
+// console.log(process.env.PORT);
 
-mongoose.connect(connectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log('Mongodb connection is successful');
-}).catch((err) => {
-    console.log(err);
-    process.exit();
-});
-
-
-// mongoose.connect('mongodb+srv://NagyZsolt:Stratocaster76@cluster0.asejk.mongodb.net/locomotives?retryWrites=true&w=majority', {
+// mongoose.connect(connectionString, {
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true
-// })
-//     .then(() => logger.info('MongoDB connection is OK!'))
-//     .catch((err) => {
-//         logger.error(err);
-//         process.exit();
-//     });
+// }).then(() => {
+//     console.log('Mongodb connection is successful');
+// }).catch((err) => {
+//     console.log(err);
+//     process.exit();
+// });
 
 app.use(morgan('combined', {stream: {write: (message) => logger.info(message)}}));        //a morgan alapértelmezetten mindig a console-ra logol.
 
@@ -56,29 +47,24 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-});
+app.use(express.static('./public'));
 
-// app.use(express.static('./public'));
+//YAML DOCS endpoint
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(YAML.load('./docs/swagger.yaml')))
 
-// app.use('/download/:img', (req, res) => {
-//     res.download(`./public/img/${
-//         req.params.img}`)
-// });
-
+//authentication
 app.post('/login', authHandler.login);
 app.post('/refresh', authHandler.refresh);
 app.post('/logout', authHandler.logout);
 
-
+//endpoints
 app.use('/user', userRoutes);
 app.use('/diesel', dieselRoutes);
 app.use('/electric', electricRoutes);
 app.use('/comment', authenticationByJWT, commentRoutes);
 app.use('/buyitem', authenticationByJWT, buyItemRoutes);
 
-//hibakezelő midleware
+//error handling midlleware
 app.use((err, req, res, next) => {
     logger.error(`Error ${err.statusCode}: ${err.message}`);
     res.status(err.statusCode);

@@ -20,7 +20,9 @@ exports.createNewUser = (req, res, next) => {
             res.status(201).json({
                 id: userData._id,
                 username: userData.username,
-                role: userData.role
+                role: userData.role,
+                email: userData.email,
+                password: userData.password
             });
         })
         .catch(err => {

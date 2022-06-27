@@ -6,6 +6,76 @@ info:
 servers:
   - url: http://localhost:3000
 paths:
+  /login:
+    post:
+      tags:
+        - Auth
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Successfull login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                  refreshToken:
+                    type: string
+        '400':
+          description: Username or password is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+        '404':
+          description: Username or password is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /logout:
+    post:
+      tags:
+        - Auth
+      summary: Logout user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Successfull logout
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                  refreshToken:
+                    type: string
+        '400':
+          description: Username or password is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+        '404':
+          description: Username or password is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
   /diesel:
     get:
       summary: Returns a list of diesel locomotives
@@ -28,6 +98,8 @@ paths:
                 $ref: '#/components/schemas/Error'
   /diesel/{id}:
     get:
+      security:
+        - bearerAuth: []
       summary: Returns a diesel locomotive
       tags:
         - Diesel
@@ -80,6 +152,8 @@ paths:
                 $ref: '#/components/schemas/Error'
   /electric/{id}:
     get:
+      security:
+          - bearerAuth: []
       summary: Returns an electric locomotive
       tags:
         - Electric
@@ -112,6 +186,8 @@ paths:
                 $ref: '#/components/schemas/Error'
   /comment:
     get:
+      security:
+        - bearerAuth: []
       summary: Returns a list of comments
       tags:
         - Comment
@@ -131,6 +207,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
+      security:
+        - bearerAuth: []
       summary: Creates a new comment
       tags:
         - Comment
@@ -163,6 +241,8 @@ paths:
                 $ref: '#/components/schemas/Error'              
   /comment/{id}:
     get:
+      security:
+        - bearerAuth: []
       summary: Returns a comment
       tags:
         - Comment
@@ -194,6 +274,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'              
     delete:
+      security:
+        - bearerAuth: []
       summary: Removes a comment
       tags:
         - Comment
@@ -226,6 +308,8 @@ paths:
                 $ref: '#/components/schemas/Error'
   /buyitem:
     get:
+      security:
+        - bearerAuth: []
       summary: Returns a list of buying
       tags:
         - BuyItems
@@ -245,6 +329,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
+      security:
+        - bearerAuth: []
       summary: Creates a new buying
       tags:
         - BuyItems
@@ -277,6 +363,8 @@ paths:
                 $ref: '#/components/schemas/Error'              
   /buyitem/{id}:
     get:
+      security:
+        - bearerAuth: []
       summary: Returns an item
       tags:
         - BuyItems
@@ -308,6 +396,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'              
     delete:
+      security:
+        - bearerAuth: []
       summary: Removes an item
       tags:
         - BuyItems
@@ -421,37 +511,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'              
-    delete:
-      summary: Removes a user
-      tags:
-        - Users
-      parameters:
-        - in: path
-          name: id
-          required: true
-          schema: 
-            type: string
-      responses:
-        '200':
-          description: A user has been deleted successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                items:
-                  $ref: '#/components/schemas/User'
-        '404':
-          description: User with id  doesn't exist
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'          
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'              
 
 tags:
   - name: Diesel
@@ -464,6 +523,8 @@ tags:
     description: Access the items
   - name: Users
     description: Access the users
+  - name: Auth
+    description: Authetnication handling
 components:
   schemas:
     Diesel:
@@ -598,18 +659,16 @@ components:
       type: object
       required:
         - username
-        - email
         - password
-        - role
       properties:
         username:
           type: string
         email:
           type: string
         password:
-          type: number
+          type: string
         role:
-          type: number
+          type: string
     Error:
       type: object
       required:
@@ -620,3 +679,8 @@ components:
           type: string
         has_error:
           type: boolean
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

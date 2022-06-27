@@ -41,17 +41,14 @@ export class CardDetailsComponent implements OnInit, OnDestroy {
     this.subs = this.ar.paramMap.subscribe(
       param => this.id = param.get('id')
     )
-    console.log(this.id);
 
     this.locoSubs = this.dieselService.getOneDiesel(this.id).subscribe(
       (loco: DieselModel) => this.loco = loco
     )
-    console.log(this.loco);
 
     this.commentService.getComment().subscribe({
       next: (comments: Comment[]) => {
         this.comments = comments
-        console.log(this.comments);
       },
       error: (err) => {console.log(err)},
       complete: () => {}

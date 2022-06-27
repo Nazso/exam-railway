@@ -39,10 +39,10 @@ describe('BuyItems controller test', () => {
     let response;
     let nextFunction;
 
-    // beforeEach(() => {
-    //     buyItemService.__setMockData(mockData);
+    beforeEach(() => {
+        buyItemService.__setMockData(mockData);
 
-    // });
+    });
     
     test('findOne() with valid id', () => {
         const BUYITEMS_ID = "62aa01450e0e9068d72f043c";
@@ -73,8 +73,8 @@ describe('BuyItems controller test', () => {
             }
         });
 
-        // response = mockResponse();
-        // nextFunction = jest.fn();
+        response = mockResponse();
+        nextFunction = jest.fn();
         
         return buyItemController.findOne(request, response, nextFunction)
             .then(() => {

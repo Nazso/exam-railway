@@ -14,16 +14,4 @@ routes.get('/', authenticationByJWT, adminRoleHandler, (req, res, next) => {
     return userController.getAllUsers(req, res, next);
 });
 
-// routes.get('/:id', authenticationByJWT, (req, res, next) => {
-//     return userController.getUserById(req, res, next);
-// });
-
-// routes.put('/:id', authenticationByJWT, (req, res, next) => {
-//     return userController.updateUser(req, res, next);
-// });
-
-// routes.delete('/:id', authenticationByJWT, (req, res, next) => {
-//     return userController.deleteUser(req, res, next);
-// });
-
 module.exports = routes;
