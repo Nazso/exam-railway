@@ -1,11 +1,15 @@
-<div class="container d-flex justify-content-around flex-wrap">
-    <div class="card-style" *ngFor="let loco of locos">
-        <img class="img_card card-img-top" [src]="loco.url" alt="">
-        <div class="card-body">
-            <h5 class="card-title">név: {{ loco.name }}</h5>
-            <h5 class="card-title">típus: {{ loco.type }}</h5>
-            <h5 class="card-title">gyártó: {{ loco.manufacturer }}</h5>
-            <button class="btn btn-primary" (click)="goToDetails(loco)">Részletek</button>
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-around flex-wrap">
+            <div class="card-style" *ngFor="let loco of locos">
+                <img class="img_card card-img-top" [src]="loco.url" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">név: {{ loco.name }}</h5>
+                    <h5 class="card-title">típus: {{ loco.type }}</h5>
+                    <h5 class="card-title">gyártó: {{ loco.manufacturer }}</h5>
+                    <button class="btn btn-primary" (click)="goToDetails(loco)">Részletek</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

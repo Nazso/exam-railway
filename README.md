@@ -10,6 +10,15 @@ Eredeti szakmám segítették a témaválasztást a vizsgamunka elkészítéséh
 - username: YodaOne
 - password: teszt
 
+# Belépés
+## Backend
+cd \Locos-backend\
+- npm run docker:build
+- npm run docker:run
+
+cd \LocoAngular\
+- ng s
+
 # Entitások
 ## Felhasználók
 Egy látogató, aki regisztrálhat, bejelentkezhet, a mozdonyok részleteit megtekintheti, modelleket vásárolhat, kommenteket írhat, valamint mások kommentjeit olvashatja.

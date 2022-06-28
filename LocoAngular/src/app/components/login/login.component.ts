@@ -18,8 +18,6 @@ export class LoginComponent implements OnInit {
   public signIn(form: NgForm): void {
 
     if(form.valid) {
-      console.log(form.value);
-
       this.authService.login(form.value).subscribe({
         next: () => {},
         error: () => {},

@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { BuyItem } from '../../models/buyItem.model';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { DieselModel } from '../../models/diesel.model';
 import { AuthService } from 'src/app/services/auth.service';
 import { DieselService } from 'src/app/services/diesel.service';

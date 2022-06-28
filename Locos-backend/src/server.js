@@ -11,6 +11,9 @@ const cors = require('cors');
 const YAML = require('yamljs');
 const swaggerUI = require('swagger-ui-express');
 const config = require('config');
+// const path = require('path');
+
+// const angularAppPath = path.join(__dirname, '..', 'public', 'angular');
 
 const app = express();
 app.use(cors());
@@ -21,26 +24,14 @@ const adminRoleHandler = require('./auth/adminOnly');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-// const connectionString = process.env.DB_CONNECTION;
-// const connectionString = `mongodb://${config.database.host}`;
-// console.log(process.env.PORT);
-
-// mongoose.connect(connectionString, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// }).then(() => {
-//     console.log('Mongodb connection is successful');
-// }).catch((err) => {
-//     console.log(err);
-//     process.exit();
-// });
-
 app.use(morgan('combined', {stream: {write: (message) => logger.info(message)}}));        //a morgan alapértelmezetten mindig a console-ra logol.
 
 //Authorization
 const authHandler = require('./auth/authHandler');
 
 app.use(express.json());
+
+// app.use('/', express.static(angularAppPath));
 
 app.use((req, res, next) => {
     console.log(req.url, req.method, req.httpVersion);

@@ -6,7 +6,7 @@ $background_cards: rgb(119, 205, 245);
     background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
 }
 
-.container__card {
+.container-card {
     background-color: $background_cards;
     border: 3px solid yellow;
     border-radius: 5px;
