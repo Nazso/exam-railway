@@ -2,6 +2,11 @@
 Eredeti szakmám segítették a témaválasztást a vizsgamunka elkészítéséhez. Az alkalmazás a magyar vasútvonalakon futott és futó mozdonyokról ad egy rövid áttekintést a teljesség igénye nélkül. A mozdonyok műszaki adatainak bemutatása és rövid történeti ismertetése mellett a regisztrált és bejelentkezett felhasználó 3 féle méretben modelleket vásárolhat a kiválasztott típusból, valamint kommentekkel visszajelzéseket adhat, véleményt formálhat, illetve kiegészítésekkel bővítheti az ismereteket.
 
 # Felhasználói adatok belépéshez
+## Regisztráció
+- A felhasználónév csak kis- és nagybetű lehet ékezet nélkül és szám 5-15 karakter hosszúságban
+- Email validáció működik
+- A jelszó csak kis- és nagybetű lehet ékezet nélkül és szám 4-15 karakter hosszúságban
+
 ## Felhasználó 'user' szereppel:
 - username: Zsolt
 - password: teszt
