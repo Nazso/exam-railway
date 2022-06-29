@@ -13,6 +13,8 @@ const port = config.port || 3000;
 
 const connectionString = process.env.DB_CONNECTION
 
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
