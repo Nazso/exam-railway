@@ -1,104 +1,250 @@
 {
   "electric": [
     {
-      "id": 1,
-      "type": "V63",
-      "name": "Gigant",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/630138_Pilis_20180621.jpg/251px-630138_Pilis_20180621.jpg"
-      ],
-      "manufacturer": "Ganz-Mávag"
+    "type": "V63",
+    "name": "Gigant",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/630138_Pilis_20180621.jpg/251px-630138_Pilis_20180621.jpg",
+    "manufacturer": "Ganz-Mávag",
+    "wheelArrangement": "Co'Co'",
+    "numberOfAxels": 6,
+    "engine": "Villamos",
+    "topSpeed": "120/160 km/h",
+    "power": "3575 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "A nehéz tehervonatok és a nehezebb személyvonatok számára rendelte meg a MÁV a MÁV V63-as villamosmozdony-sorozatot. A vezető tervező Vizelyi György volt. A már korábban kikísérletezett tirisztoros szabályzással az első mozdonyt, a V63 001 pályaszámút 1975-ben szállította a Ganz, majd egy évvel később a második prototípust, mely a V63 002 pályaszámot kapta. Mindkét mozdony még nyugati elektronikával rendelkezett. A V63 003, V63 004, V63 005, V63 006 és V63 007 pályaszámú nullszériás mozdonyok 1980–1981-ben készültek, immár magyar elektronikával és forgóvázzal. 1984-től a Krupp Művektől megvásárolt licenc alapján más, jobb futástulajdonságú forgóvázakkal kezdődött meg a szériamozdonyok építése: 1988-ig 49 darab készült el belőlük, így összesen 56 tagot számlált a Gigant-flotta. 2020-ban 52 létező példány volt még."
     },
     {
-      "id": 2,
-      "type": "V43",
-      "name": "Szili",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/V43_2311.jpg/120px-V43_2311.jpg"
-      ],
-      "manufacturer": "Ganz-Mávag"
+    "type": "V43",
+    "name": "Szili",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/V43_sorozatok.jpg/250px-V43_sorozatok.jpg",
+    "manufacturer": "Ganz-Mávag",
+    "wheelArrangement": "B'B'",
+    "numberOfAxels": 4,
+    "engine": "Villamos",
+    "topSpeed": "120 km/h",
+    "power": "2200 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "Az üzembehelyezés során fokozatosan kefeszikrázás keletkezett a vontatómotoroknál, mert a szállító kiküldött szerelője nem ügyelt eléggé a szénkefetartók pontos beállítására. A szállító mérnöke szüntette meg ezt a hibát, így a MÁV személyzete is megismerhette a helyes eljárást. Második hibaként keretrepedések keletkeztek nem sokkal az üzembehelyezés után. Más cég szerkesztette és gyártotta a keretet, és más a forgóvázakat, így a keretfelfüggesztéshez tartozó elemek kiképzésében a kerettervezőnek nem volt tapasztalata az adott forgóvázhoz. Áttervezéssel ez a hiba is megszűnt. A MÁV mozdonyszemélyzete nehézség nélkül megismerte a mozdonyokat, bár a nagy sorozatszám következtében nem lehetett olyan elit mozdonyvezető-kart biztosítani, mint annak idején a Kandó-mozdonyokhoz. Egyetlen súlyos mozdonyvezetői hiba fordulhatott elő: az egyenirányítót védő gyorskapcsoló lekapcsolása után a mozdonyvezető kiiktathatta a gyorskapcsolót, és ezzel igen nagy költségű kárt okozott az egyenirányító diódákban. Ez annak a – még a gőzmozdony üzemből – beidegződött gyakorlatnak volt a velejárója, mely szerint szégyen a szolgálatképtelenség, hiszen a gőzmozdony szerkezete olyan rendkívül egyszerű, hozzáférhető, sőt türelmes, hogy egy jó mozdonyvezető csaknem minden hibát ideiglenesen maga is ki tudott küszöbölni még a vonalon. Ez a villamosmozdonyoknál soha nem lesz elérhető, viszont a fejlődés növekedése olyan mértékű, hogy számítani lehet az üzembiztonság nagymértékű növekedésére. A V43-asok első hét példányát még Németországban szerelték össze 1963-ban 4384-4390 gyári számokon, majd a licenc megvásárlása után a többit már a Ganz-MÁVAG üzemében készült el. A VM14 sorozatjelű villanymozdony-szérián belül az első hét példányt leszámítva összesen 25 alváltozatot lehet megkülönböztetni. Az idők folyamán számos változtatás lett a mozdonyokon, például a zártárcsa helyett a vörös zárlámpa, amely a 90-es években kezdett elterjedni, vagy a gumirugós felfüggesztés."
     },
     {
-      "id": 3,
-      "type": "V46",
-      "name": "Csöpi",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/A_460_006_Mez%C5%91k%C3%B6vesd_%C3%A1llom%C3%A1son.jpg/120px-A_460_006_Mez%C5%91k%C3%B6vesd_%C3%A1llom%C3%A1son.jpg"
-      ],
-      "manufacturer": "Ganz-Mávag"
+    "type": "V46",
+    "name": "Csöpi",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/A_460_006_Mez%C5%91k%C3%B6vesd_%C3%A1llom%C3%A1son.jpg/120px-A_460_006_Mez%C5%91k%C3%B6vesd_%C3%A1llom%C3%A1son.jpg",
+    "manufacturer": "Ganz-Mávag",
+    "wheelArrangement": "Bo'Bo'",
+    "numberOfAxels": 4,
+    "engine": "Villamos",
+    "topSpeed": "80 km/h",
+    "power": "820 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "A V46-os mozdonysorozatot a villamosított rendezőpályaudvarokon történő dízelmozdonyos tolatás kiváltására rendelte meg a MÁV, viszont ezek a villanygépek nagyszerűen beváltak a budapesti állomások közötti teherforgalom lebonyolításában, a nagyobb csomópontok környékén a kisebb terhelésű tehervonatok továbbításánál, valamint a személypályaudvarok személykocsi-rendezési munkáiban is. Vonatfűtésre ugyan nem képesek, de nyári időszakban még kisebb személyszállító vonatokon is előfordulnak. A sokrétű feladatkör ellátásával a V46-os a Ganz–MÁVAG mozdonygyár egyik legsikeresebb sorozata lett. A sorozat viszonylag fiatal korának és a jól sikerült konstrukciónak is köszönhető, hogy eddig egyetlen példányt sem selejteztek a 460-as mozdonyok közül. Sajnos a vasúti árufuvarozás változásai, a magánvasutak térnyerése és a tulajdonos üzleti döntései miatt azonban ezek a mozdonyok megsínylették az új évezredet: 2016-ban a 60 darabos állományból mindössze 33 dolgozott legalább egyszer, több mozdony tartósan letétes (átmenetileg üzemen kívül helyezett gép, amely 48 órán belül újra szolgálatba állítható, ha a vontatási igények megkövetelik), valamint több fenntartásból kivont gép is van, amely alkatrészbázisként szolgál a működő társai számára. 2019-ben az arány tovább romlott, és számos korábban folyamatosan aktív gép is megállt. 2019-től gyakorlatilag az állomány több mint fele inaktív."
     },
     {
-      "id": 4,
-      "type": "1047",
-      "name": "Taurus",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/M%C3%A1v_1047.jpg/250px-M%C3%A1v_1047.jpg"
-      ],
-      "manufacturer": "Siemens"
+    "type": "V41",
+    "name": "Kisleó",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Villanymozdony_%28Electric_locomotive%29_-_panoramio.jpg/120px-Villanymozdony_%28Electric_locomotive%29_-_panoramio.jpg",
+    "manufacturer": "Ganz-Mávag",
+    "wheelArrangement": "Bo'Bo'",
+    "numberOfAxels": 4,
+    "engine": "Villamos",
+    "topSpeed": "80 km/h",
+    "power": " 845 kW",
+    "typeOfElectricity": "16 kV 50 Hz AC",
+    "details": "A sorozat gyártási ideje alatt lépett át a MÁV a „Kandó-féle” 16 kV 50 Hz-es felsővezetéki rendszerről a 25 kV 50 Hz-es rendszerre. Így (a két prototípus V41-es kivételével) valamennyi V41 és V42 sorozatú mozdonyt úgy gyártották, hogy mind a 16 kV-os, mind a 25 kV-os munkavezeték rendszer alatt tudjanak közlekedni. A V41-es sorozatból a MÁV 30 db-ot szerzett be. A mozdonyok kezdetben főváros környéki ingavonatokat is továbbítottak, de kis teljesítményük és rossz üzemkészségük miatt a V42 és V43 sorozatok megjelenésével szinte kizárólag tehervonatokat vittek. A mozdonyok az üzemben nem váltak be, elsősorban konstrukciós hibák miatt és nagyon sok mozdony tűzesetek következtében pusztult el. Így a selejtezésük már 1969-ben megkezdődött, három év múlva a sorozat kevesebb mint fele volt csak állományban. A forgalomból kivont, selejtezett gépeket gyakran nem bontották szét, hanem stabil állomási fűtőgépekké alakították át, személyvonatok előfűtésére."
+    },
+    {
+    "type": "1047",
+    "name": "Taurus",
+    "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/M%C3%81V_Taurus.jpg/250px-M%C3%81V_Taurus.jpg",
+    "manufacturer": "Siemens TS",
+    "wheelArrangement": "Bo' Bo'",
+    "numberOfAxels": 6,
+    "engine": "Villamos",
+    "topSpeed": "160 km/h",
+    "power": "6400 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "A Siemens EuroSprinter mozdonycsalád ES64U2 jelű, 6400 kW teljesítményű, 230 km/h sebességű univerzális mozdonyát találták megfelelőnek, és megkötötték a szerződést a Siemensszel. 2002 folyamán a MÁV számára ES64U2V4, a GYSEV számára ES64U2V5 típusú mozdonyok készültek, melyek kismértékben eltérnek egymástól. A mozdonyok rendelkeznek az osztrák és német vonalakra szóló futásengedéllyel is, így részt vehetnek a későbbiekben a nemzetközi teherszállításban. A két vasúttársaság az 1047-es sorozattal a MÁV V43 sorozatú mozdonyok egy részét próbálja kiváltani. A V4, V5 verziószámok különbségeket jelentenek az ES64U2 típuson belül. V1-es típus az ÖBB 1116-os és a DB 182-es sorozata, a V2 és V6-os típus a Siemens Dispolok mozdonyok. (A Siemens saját cégének is gyártott a típusból, melyeket magánvasutaknak ad bérbe.) A V3-as típus a svájci HUPAC mozdonyokat, a V4 és V5 pedig a MÁV és GYSEV mozdonyokat jelölik. A verziók mindig az adott ország vasúti követelményeire készülnek, többek között különböző vonatbefolyásoló rendszerekkel és áramszedőkkel. Néhány mozdony, melyek eltérő felsővezeték típusokon közlekednek, el vannak látva egy harmadik áramszedővel is. Ilyen volt például az ÖBB 1116-os sorozat első 25 darabja is. Az 1047-es sorozatnál ez már nem lett felszerelve, mert a mozdonyok átvétele előtt a felsővezeték kígyózását átépítették, így az osztrák mozdonyokról is leszerelték a harmadik áramszedőt."
+    },
+    {
+    "type": "480",
+    "name": "Bombardier TRAXX",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/480_002_Abaliget.jpg/250px-480_002_Abaliget.jpg",
+    "manufacturer": "Bombardier",
+    "wheelArrangement": "Bo'Bo'",
+    "numberOfAxels": 6,
+    "engine": "Villamos",
+    "topSpeed": "160 km/h",
+    "power": "5600 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "A MÁV által megrendelt kétáramrendszerű mozdonyok 160 km/h sebességre alkalmasak, két áramrendszerük révén a 25 kV 50 Hz-es és 15 kV 16 2/3 Hz-es villamosüzemű pályákon is képes közlekedni. A mozdonysorozatot elsősorban a nemzetközi személyszállító vonatok, belföldi sebes- és gyorsvonatok valamint InterCityk továbbítására kívánják felhasználni, továbbá a nemzetközi teherszállításban is feladatot kap. A 480 001-es néhány hétnyi magyarországi tesztüzem után visszatért a gyártóbázisra újabb próbafutások és beállítások miatt, majd 2011. január közepén érkezett vissza Hegyeshalomba. A próbaüzem következő szakaszában, az úgynevezett „tartampróba” alatt, meghibásodás nélkül kell lefutnia 30 000 km-t, személyszállító vonatok élén. A 2011. február 15-én megkezdődött próbamenetek során a mozdony megfordult Pécsen, Szegeden, Miskolcon és közlekedett a kör IC viszonylatán is. Elektronikai hiba miatt 2011. február 22-én szolgálatképtelenné vált. 2011. április 29-én megérkezett a 480 002 pályaszámú mozdony, majd ezt követően júliusban a 003-as, 004-es, 005-ös és a 006-os, valamint augusztus elején a 007-es és 008-as gép is. 2011. november elején megérkezett a 480 015, 016, és a 017-es gép, december elején pedig a 018-as és 019-es is. Még karácsony előtt megérkezett a 020-as és a 021-es mozdony is. 2012. januárjában megjött a 480 022-es, 023-as és 024-es mozdony, amelyek még ebben a hónapban le is tették hatósági vizsgájukat. Az utolsó, 480 025 pályaszámú mozdony 2012. február 3-án kapta meg futásengedélyét."
+    },
+    {
+    "type": "5341",
+    "name": "Flirt",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/MavFlirt001.jpg/200px-MavFlirt001.jpg",
+    "manufacturer":"Stadler Rail",
+    "wheelArrangement": "Bo'2'2'2'Bo'",
+    "numberOfAxels": 12,
+    "engine": "Villamos",
+    "topSpeed": "160 km/h",
+    "power": "2000 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "A Stadler FLIRT a Stadler Rail által gyártott többrészes csuklós villamos motorkocsi, illetve motorvonat. Neve egy német mozaikszó, a Flinker Leichter Innovativer Regional-Triebzug (magyarul tükörfordításban: gyors, könnyű, innovatív regionális (vonat) szerelvény, magyarosan: Fürge Légkönnyű Innovatív Regionális motorvonaT) rövidítése. Hivatalos magyar (MÁV-) definíció szerint a FLIRT nem motorvonatnak, hanem csuklós motorkocsinak, azaz egyetlen önálló járműnek tekintendő. Ennek köszönhető, hogy az első hatvan jármű minden tagja eredetileg ugyanazon sorozatjelet és pályaszámot viselte. Ezzel ellentétes a Németországban és Olaszországban követett szisztéma, ahol minden tag önálló sorozatjelet és pályaszámot kap, és ott motorvonatnak nevezik. A kocsiszekrényenként külön számozást már Magyarországon is előírja a jelenleg aktuális jogszabály.[2] Az új rendszer szerint érkezik a Győr-Sopron-Ebenfurti Vasút valamennyi és a MÁV-START 2014-től 2016-ig beszerzett 63 db szerelvénye, míg az eredeti 60 db MÁV-jármű átszámozása 2015 decemberében fejeződött be. A MÁV-os szerelvények teljes hosszának sorozatszáma korábban 5341 volt, 2014 tavasza óta a járműtípus számozása 415, míg a vonatrészek 1415, 2415, 3415 és 4415 számokat kapják. E típusból a 123. jármű 2016. december 13-án érkezett meg és a 415 123 számot kapta. Ezzel a világ legnagyobb FLIRT-flottája a MÁV tulajdonában található. A GYSEV részére szállított harmadik generációs FLIRT sorozat a 435-ös sorozatszámot kapta."
+    },
+    {
+    "type": "BDVmot",
+    "name": "Hernyó",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/414006_Mez%C5%91k%C3%B6vesd.jpg/250px-414006_Mez%C5%91k%C3%B6vesd.jpg",
+    "manufacturer": "Ganz-Mávag",
+    "wheelArrangement": "motorkocsi: B'B', mellékkocsi: 2'2', vezérlőkocsi: 2'2'",
+    "numberOfAxels": 20,
+    "engine": "Villamos",
+    "topSpeed": "120 km/h",
+    "power": "1520 kW",
+    "typeOfElectricity": "25 kV 50 Hz AC",
+    "details": "A BDV villamos-motorvonat alapegysége egy B'B' tengelyelrendezésű, 1520 kW teljesítményű poggyászteres villamos motorkocsiból (BDVmot, 414 sorozat), két közbenső 2’2’ tengelyelrendezésű mellékkocsiból (Bmx 22-05) és egy ugyancsak 2'2' tengelyelrendezésű vezérlőkocsiból (Bmxfee 80-05, korábban Bmxt) áll. Az összes gépészeti berendezés a motorkocsiban lett elhelyezve. A motorkocsi két forgóvázában elhelyezett négy kerékpárját az alvázra hosszirányban felfüggesztett 2 db, a gyártás éveiben újdonságnak számító, aszinkronmotor hajtja kardántengely és kúpkerékhajtás segítségével. A vontatómotorok táplálásához a járművek építése idején még nem volt lehetőség nyugatról a korszerű GTO-tirisztorok beszerzésére, így a hajtáselektronikát hagyományos tirisztorokkal, áraminverteres felépítéssel oldották meg. A motorkocsi képes visszatápláló fékezésre is, de ezt a funkciót hibás működése miatt ki kellett iktatni. A vonat ajtajai távműködtetésűek, gombnyomásos nyitással és központi, a mozdonyvezető általi ajtózárással. Három villamos motorvonat összekapcsolható és egy egységként távműködtetve vezérelhető. A közbenső mellékkocsik a vonategységből kisorolhatóak, és mozdony vontatta szerelvény alakítható belőlük. A névleges teljesítmény 1520 kW, a motorvonat üres szolgálati tömege 193 tonna, tehát a fajlagos teljesítmény az üres vonatnál 7,9 kW/tonna, ami elővárosi gyakorlatban meglehetősen szolid érték. (OVSZ előírás ma már elővárosban a 8-12 kW/tonna érték.) Az indító vonóerő és a villamos fékezés hatásossága is meglehetősen mérsékelt a váci vonal átlagosan 3,7 km-es átlagos megállási távolságához mérten. A hajtott tengelyekre jutó tömeg aránya az egy motorkocsis kialakítás következtében 33%. A 120 km/h maximális sebességű motorvonatokból 1990-ig 20 db készült, melyből az utolsó 4 egység egy-egy elsőosztályú mellékkocsit (Amx) is tartalmazott – ezek ma mozdonyvontatású szerelvényekben közlekednek. Kezdetben sok gond volt a kardántengelyekkel és vontatómotor csapágyakkal, amely balesethez és a motorkocsik időszakos leállításához vezetett. A problémát ezen alkatrészek megerősítése orvosolta. A sorozatból már csak 19 motorkocsi közlekedik, mert a BDVmot 005 motorkocsit 1994-ben baleset miatt selejtezték, és a korábban leégett BDVmot 019-et a selejtezett 005-ösből építették újjá."
+    },
+    {
+    "type": "V42",
+    "name": "Leó",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/V42_527_2010.jpg/250px-V42_527_2010.jpg",
+    "manufacturer": "Ganz-MÁVAG",
+    "wheelArrangement": "Bo'Bo'",
+    "numberOfAxels": 4,
+    "engine": "Villamos",
+    "topSpeed": "80 km/h",
+    "power": "1215 kW",
+    "typeOfElectricity": "16 kV/25 kV 50 Hz",
+    "details": "1961-ben kezdték el gyártani, 1966-ig 42 db épült belőle. Járműszerkezetileg azonos a MÁV V41 sorozatjelű mozdonyokkal, a főgépcsoport teljesítménye nagyobb, fordulatszáma kisebb, és kettő helyett csak egy fődinamót építettek be. Eleinte Tatabánya–Oroszlány és Miskolc–Diósgyőr között, valamint a budapesti körvasúton tehervonatokat, valamint Budapest-Komárom, Budapest-Hatvan, Budapest-Cegléd-Szolnok és Budapest-Vác-Szob vonalakon ingavonatokat is továbbítottak BDt 200-as vezérlőkocsival. A tolt ingavonatoknál a mozdonyvezető a vezérlőkocsiból irányította a mozdonyt, de a mozdonyon is tartózkodott egy segédkezelő. Később könnyű tehervonati szolgálatot teljesítettek, utoljára állomási tolatómozdonyként dolgoztak. A sorozatot az 1990-es évek elején selejtezték le, több mozdonyt átalakítottak villamos előfűtőgépnek. A V42 527 mozdonyt a Magyar Vasúttörténeti Parkban az utolsó festésben kiállították, majd 2005-ben az Északi Járműjavítóba vitték, abból a célból, hogy újból üzemképessé tegyék. 2008-ra a mozdony újra működőképes lett. Szintén V42 sorozatú, de jelentősen eltérő szerkezetű a V42 001 pályaszámot kapott, a V41 501 pályaszámú mozdonyból átalakított kísérleti tirisztoros egyenirányítós mozdony is."
     }
   ],
   "diesel": [
     {
-      "id": 1,
       "type": "M62",
       "name": "Szergej",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/M62.jpg/250px-M62.jpg"
-      ],
-      "manufacturer": "Szovjetunió"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/M62.jpg/250px-M62.jpg",
+      "manufacturer": "Szovjetunió",
+      "wheelArrangement": "Co'Co'",
+      "numberOfAxels": 6,
+      "engine": "Dízel",
+      "topSpeed": "100 km/h",
+      "power": "1472 kW (2000LE)",
+      "transmission": "villamos",
+      "cylinderArrangement": "V16",
+      "details": "Az M62-t a Vorosilovgradi Dízelmozdonygyár (ma: Luhanszki Mozdonygyár) fejlesztette ki a MÁV megrendelésére. Később a típust a Szovjetunióban és néhány más volt szocialista országban (Mongólia, Kuba, Lengyelország) is üzembe állították.[2] A sorozatot hazánkba 1965 és 1978 között szállították M62 001 és 270, széles nyomtávú változatban pedig M62 501 és 518 közötti pályaszámokkal. A hetvenes évek végén 3 db széles nyomtávú mozdonyt átalakítottak normál nyomtávolságúra, így a hagyományos M62 sorozat 001-től 273-ig terjedt. A normál nyomtávolságú mozdonyokat az egész országban szétosztva megtalálhatjuk, míg a széles nyomtávú mozdonyok a Záhony–Fényeslitke–Eperjeske átrakó körzetben dolgoznak, záhonyi telephellyel. Bár az M62 sorozat alapvetően tehervonatok vontatására lett beszerezve, már a kezdeti időktől használták nehéz személyszállító vonatok továbbítására. Saját fűtőgenerátor híján a téli fűtési szezonban kezdetben gőzfejlesztő kazánkocsival, később a elektromos üzemű fűtés bevezetésével VFK villamos fűtőkocsival kiegészítve közlekedtek. Nagy szerephez jutott a sorozat a Balaton két partjának nyári csúcsforgalmában is, eleinte mind a kanizsai, mind a tapolcai. (A déli parti vonal villamosítását követően már csak az északi parti vasútvonalon.) A sorozat jelentősebb selejtezése az igények csökkenésével 1991-ben kezdődött, darabszámuk a selejtezésekkel és külföldi eladásokkal mintegy a negyedére csökkent. 2015-ben 82 darab volt állományban, Szolnok, Szeged, Záhony, Ferencváros, Dombóvár, Hatvan, Miskolc, Szombathely, Székesfehérvár és Debrecen között vannak elosztva. A mozdonyokba 16 hengeres, V elrendezésű, turbófeltöltéses kétütemű dízelmotorok vannak beépítve.Tipusa: Kolomna 14D40."
     },
     {
-      "id": 2,
       "type": "M61",
       "name": "Nohab",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG/180px-Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG"
-      ],
-      "manufacturer": "Svédország"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG/180px-Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG",
+      "manufacturer": "Nydqvist och Holm Aktiebolag",
+      "wheelArrangement": "Co'Co'",
+      "numberOfAxels": 6,
+      "engine": "Dízel",
+      "topSpeed": "105 km/h",
+      "power": "1435 kW (1950 LE)",
+      "transmission": "villamos",
+      "cylinderArrangement": "V16",
+      "details": "Az 1950-es évek végén, az 1960-as évek elején a gőzvontatás aránya a hazai vasútvonalakon igen magas, 85%-os volt. A korszerűsítés megkívánta nagy teljesítményű dízelmozdonyok forgalomba állítását, azonban a magyar ipar abban az időben nem volt felkészülve ilyen vasúti járművek gyártására. Ezért a MÁV illetékes szakemberei pályázatot írtak ki fővonali mozdony beszerzésére. A felhívásra 17 cég jelentkezett 30 típussal. A pályázók közül két cég, a német Krauss-Maffei, valamint a svéd NOHAB mozdonyai kaptak lehetőséget a magyarországi vasútvonalakon történő kipróbálásra. 1960-ban mindkét gyártó demonstrátora (tesztjárműve) sikeresen teljesítette a próbameneteket. Végül az ajánlatok közül a MÁV választása az utóbbira esett, a mozdony technikai kiforrottsága, kevesebb karbantartást igénylő szerkezeti felépítése miatt, valamint azért, mert a típusban alkalmazott motorból világszerte már több ezer darab üzemelt. A mozdonyból a MÁV összesen 20 darabot vásárolt. Annak ellenére, hogy a NOHAB gyár készen állt volna további járművek gyártására és leszállítására, a politikai körülmények nem tették lehetővé a beszerzésüket. A szovjet vezetés ugyanis rossz szemmel nézte, hogy egy semleges ország elragadja tőlük egy szövetségesük piacát, ezért a magyar államnak 25 mozdony árát kellett kifizetnie, miközben csupán 20 mozdonyt kapott. A MÁV ezt követően a szovjet gyártmányú MÁV M62 sorozatszámú Szergej vásárlása mellett kényszerült dönteni. Forgalomba állításukat követően M61-es mozdonyok elsősorban gyorsvonatokat továbbítottak, jellemzően Budapest és a vidéki nagyvárosok között. Ennek oka főként az volt, hogy a mozdonyok rendelkeztek a vonatok fűtéséhez szükséges gőzfejlesztővel. (Abban az időben a személykocsik még nem villamos fűtésűek voltak.) Az M61 011-020 pályaszámú mozdonyokat a Szolnok–Debrecen–Nyíregyháza–Záhony-vasútvonal villamosításáig (1970. dec. 11.) kihelyezték a debreceni fűtőházba. Ez időben jártak Mátészalka felé is a Debrecen–Nyírbátor–Mátészalka-vasútvonalon. Az 1970-es és az 1980-as években az ország keleti feléből villamos vontatás térnyerésével a mozdonyok egyre inkább kiszorultak. (A villamosított fővonalakon a szolgálatot a V43 (Szili) és a V63 (Gigant) villamos mozdonyok vették át.) Az 1980-as évektől kezdve már főként a Balaton északi partján teljesítettek szolgálatot a törzsvonalukká vált Székesfehérvár–Tapolca-vasútvonalon. 1983. szeptember 20-tól 1989. június 1-jéig több M61-es volt Tapolcáról a nagykanizsai fűtőházba kihelyezve, később állomásítva. A Székesfehérvár–Gyékényes-vasútvonal villamosítása után 1990 júliusáig az összes megmaradt mozdony Tapolcára került és továbbra is a Balaton északi partján teljesítettek szolgálatot. 1998. május 1-jétől az M61 017-est az Északi Vontatási Főnökség Rákosi telepén segélyszerelvény mozdonyaként alkalmazták és az Északi Gépészeti Főnökséghez állomásították, 2000. február 5-től átminősítették üzemi mozdonnyá, és új pályaszámot kapott."
     },
     {
-      "id": 3,
       "type": "M63",
       "name": "Bulldog",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/M63_003.jpg/250px-M63_003.jpg"
-      ],
-      "manufacturer": "Ganz-Mávag"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/M63_003.jpg/250px-M63_003.jpg",
+      "manufacturer": "Ganz-Mávag",
+      "wheelArrangement": "Co'Co'",
+      "numberOfAxels": 6,
+      "engine": "Dízel",
+      "topSpeed": "130 km/h",
+      "power": "1980 kW",
+      "transmission": "villamos",
+      "cylinderArrangement": "V16",
+      "details": "A dízelmotor indítása légindító berendezéssel ellátott, max. 35 bar nyomású levegővel meghajtott légmotorral történt. Az indító légtartályokat Ganz–MÁVAG gyártmányú TKV5/12 típusú, egyenáramú motorral hajtott kompresszor töltötte fel, de lehetőség volt a tartály feltöltésére legalább három alkalommal akkumulátorról anélkül, hogy azokat tölteni kellene. A villamos erőátvitel egy háromfázisú szinkrongenerátorból, hídkapcsolású főüzemi diódás egyenirányítókból és egyenáramú, soros gerjesztésű vontatómotorokból állt. A vontatómotorok TC 501 típusúak és marokcsapágyas felfüggesztésűek voltak. A vontatott személyvonatok fűtésére egyfázisú szinkrongenerátor termelte az áramot. A dízelmotor névleges fordulatszáma mellett a fűtési feszültség 1500 V, frekvenciája 50 Hz. Az M63-ast nagy indító és vonóereje alkalmassá tette nehéz teher- és gyorsvonatok továbbítására. Egy 2000 tonnás tehervonatot sík pályán 60 km/h, 600 tonnás személyvonatot pedig 110 km/h, a szokásos 10 kocsiból álló gyorsvonatot 130 km/h sebességgel volt képes vontatni. 130 km/h-es sebesség mellett gondot okozott a futásjóság biztosítása, valamint a megfelelő fékezettség. Ezért a mozdonyok a hordrugórendszer teljes kiegyenlítése mellett lágy primer hordrugókkal és megfelelő lengéscsillapítással, valamint keresztirányú szekunder rugózással épültek, ám utóbbiakat azok hatástalansága miatt a későbbiekben folyamatosan leszerelték. A megfelelő fékezettséget a beépített háromnyomású, Knorr-rendszerű fékberendezés biztosította. Az M63,001 és 002-es mozdonyt egymástól függetlenül és együttesen is működtethető légfékkel és elektrodinamikus fékkel is felszerelték. A MÁV igényeinek megfelelően 160 km/h sebességre alkalmas forgóvázakat is készítettek csőtengelyes hajtással, amit az M63,002 psz. mozdonyba építettek be. A mozdonyok alváza és oldalfalai hajlított és sík lemezekből épített szekrénytartós felépítésűek, amelyek együtthordó szerkezetet alkottak. Így a teherviselésben a bontható tetőrészek kivételével a mozdonyba épített minden szerkezeti anyag részt vett. A mozdony külső formatervét Budavári István formatervező iparművész készítette."
     },
     {
-      "id": 4,
       "type": "M41",
       "name": "Csörgő",
-      "url": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/18.04.10_Magyarb%C3%B3ly_M41_2122_%285806348416%29.jpg/120px-18.04.10_Magyarb%C3%B3ly_M41_2122_%285806348416%29.jpg"
-      ],
-      "manufacturer": "Ganz-Mávag"
-    }
-  ],
-  "comments": [
-    {
-      "username": "",
-      "date": "",
-      "engine": "",
-      "type": "",
-      "usercomment": "",
-      "id": 1
-    },
-    {
-      "username": "Nazso",
-      "date": "2022-06-25",
-      "engine": "Villamos",
-      "type": "2",
-      "usercomment": "lkjdhswb fljHBFL iubdfeoI OIWZDEGO F",
-      "id": 2
-    },
-    {
-      "username": "Zsolt",
-      "date": "2022-06-04",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/M41_remot_loco_at_szekszard.jpg/120px-M41_remot_loco_at_szekszard.jpg",
+      "manufacturer": "Ganz-Mávag",
+      "wheelArrangement": "B'B'",
+      "numberOfAxels": 4,
       "engine": "Dízel",
-      "type": "1",
-      "usercomment": "éouhpédrf huf puahd pDF P ",
-      "id": 3
+      "topSpeed": "100 km/h",
+      "power": "1324 kW",
+      "transmission": "hidraulikus",
+      "cylinderArrangement": "V12",
+      "details": "A mozdonyba épített négyütemű, 12 hengeres, V hengerelrendezésű, alulvezérelt, felülszelepelt, hengerenként négy szeleppel ellátott, Brown-Boveri feltöltővel felszerelt dízelmotort a francia SEMT-Pielstick gyár licence alapján építették be. A dízelmotor egy irányváltóval egybeépített, két nyomatékmódosítóból álló hidraulikus hajtóművet hajt egy gyorsító áttételen keresztül. Az irányvégállásokat az EP szelepek állítják be. Ezek a következők: résztöltés, ami 10 km/h sebességre gyorsít, beforgató, A irány, B irány. A kerékpárok kardán meghajtásúak, minden tengelyen van tengelyhajtómű. A fűtés be-ki kapcsolható bármely menetfokozatban. A mozdonyba épített háromfázisú szinkrongenerátor a dízelmotorról kapja a hajtást. A villamos vonatfűtés részére 250 kW fűtési teljesítmény áll rendelkezésre. A fűtési teljesítmény korlátozható. Működtethető 950 fordulat/perc fordulatszámon, ami vonattovábbításnál célszerű, vagy 1200 V feszültségen, ami előfűtésnél alkalmazható. Fűtési alapfordulat 1050 1/min. Ahhoz, hogy a mozdonyt üzembe helyezzük, szigorúan be kell tartani az ellenőrzéseket. Meg kell vizsgálni a féket, a jelzőlámpákat, a befecskendezőszivattyú, a motor, a hajtómű, és a légsűrítő olajszintjét. Indítása a géptéri indítószekrényen lévő gázolaj gomb benyomásával kezdődik. 1bar gázolajnyomásnál a jelzőlámpa kialszik. Aztán 10 s-ig nyomva kell tartani az indító gombot, szükség esetén a start-pilot gombot kell működtetni. Mindezek után ki kell választani a megfelelő vezetőállást. Az üzemkulcsot M állásba tenni, a mozdony lámpáit a helyzetnek megfelelően felkapcsolni, hajtóművet bekapcsolni, irányt beállítani, a D12 fékezőszelepet kinyitni, a kiegészítő féket oldó állásba tenni. A jármű jellegzetes hangját avatott fül akár 15 km távolságról is meghallhatja. A motor zaja indulásnál a legerősebb, ezért kapta a „Csörgő” nevet."
+    },
+    {
+      "type": "M40",
+      "name": "Púpos",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/22.09.94_Nagykanizsa_M40_211_%2814006011745%29.jpg/180px-22.09.94_Nagykanizsa_M40_211_%2814006011745%29.jpg",
+      "manufacturer": "Ganz-MÁVAG",
+      "wheelArrangement": "Bo' Bo'",
+      "numberOfAxels": 4,
+      "engine": "Dízel",
+      "topSpeed": "100 km/h",
+      "power": "736 kW / 1 000 LE",
+      "transmission": "villamos",
+      "cylinderArrangement": "V16",
+      "details": "Az M40 001 és 002-es mozdonyok a Ganz-MÁVAG DVM6-1 jellegű konstrukcióhoz tartoztak. Gyári pályaszámuk DVM6–1–198 és DVM6–1–199. A mozdonyok az M40 001 és 002-es pályaszámokat csak a próbafutások során viselték, mivel a MÁV később nem vette át a mozdonyokat. Ezért a gyártó 1969-ben eladta azokat a Diósgyőri Kohászati Műveknek. Ott az A27 001 és 002 pályaszámokat kapták meg. 1989-ben selejtezték őket. A mozdony igen jó konstrukciónak számított, a maga korában több tekintetben is a világszínvonalat képviselte, olyannyira, hogy módosított változatai külföldön is vevőre találtak (DVM9: Kuba, DVM11: Egyiptom). Mivel az eltérő időben épült, eltérő műszaki adottságokkal rendelkező járművek karbantartása nem volt hatékonyan megoldható, az 1970-es évektől a mozdonyok egyes részeit átépítették, annak érdekében, hogy a fenntartásuk egyszerűbben legyen megoldható. Az 1980-as években a villamos vontatás térhódítása, valamint az 1990-es években a szállítási igények csökkenése következtében az M40-es mozdonyok alkalmazási területe jelentősen csökkent. 1992-ben kezdődött a sorozat fokozatos selejtezése. Jelenleg 25 darab van állományban Záhony, Hatvan, és Dombóvár járműbiztosítási központjaiban. 2 példány a GYSEV-nél van. Működő Púposokat leggyakrabban Záhony és Hatvan térségében látni. A hatvani Púposok (201, 235) nyaranta továbbítják a Győr-Komárom-Székesfehérvár-Komárom-Győr szakaszon az 1987–1988 számú vonatpárt. A MÁV-os mozgásokon kívül a GYSEV is időnként továbbít tehervonatot egy dorogi üzem kiszolgálására M40-es mozdonnyal az 1-es vonal felől (a vonat általában a teljes útvonalon, Soprontól M40-essel közlekedik)."
+    },
+    {
+      "type": "M44",
+      "name": "Bobó",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/%C5%BDS_641-327.jpg/120px-%C5%BDS_641-327.jpg",
+      "manufacturer": "Ganz-Mávag",
+      "wheelArrangement": "Bo'Bo'",
+      "numberOfAxels": 4,
+      "engine": "Dízel",
+      "topSpeed": "80 km/h",
+      "power": "442 kW (600 LE)",
+      "transmission": "villamos",
+      "cylinderArrangement": "V16",
+      "details": "A mozdonyok 4 tengelyes, 600 LE teljesítményű, 62 tonna össztömegű dízel-villamos járművek, melyek elsősorban tolatási célokra készültek, azonban 80 km/h végsebességük széles körű felhasználási területet biztosított számukra a kisebb és közepes terhelésű tehervonati szolgálatban is. Kezdetben, fűtésmentes időszakokban személy, sőt gyorsvonatokat is továbbítottak. A mozdonyok igen sikeresnek bizonyultak, 1954 és 1976 között a típusból összesen 926 darab készült. A MÁV mintegy 200 darabos állománya mellett a hazai vonalakon a GYSEV, a HÉV és igen sok iparvállalat hálózatán is közlekedtek, illetve ma is sikerrel teljesítenek szolgálatot. Kisebb-nagyobb módosításokkal a lengyel, a jugoszláv és szovjet, valamint a távoli koreai vasutak hálózatán is megjelentek, öregbítve az akkori magyar vasúti járműgyártás jó hírnevét. Az ezredfordulóra a műszaki fejlődés és az üzemeltetői igények a mozdonytípus korszerűsítését tették szükségessé, amelyet először a GYSEV soproni karbantartó műhelyében, később a MÁV Szolnoki Járműjavítóban végeztek el a nagyobb teljesítményű és korszerűbb motorok beépítése mellett a teljes járművet rekonstruálva. Sopronban 2008-ig 14, Szolnokon pedig 40 darab felújított mozdony készült el, ugyanakkor az eredeti kivitelű járművek is nagy darabszámban dolgoznak még a hazai vonalakon, hirdetve a magyar vasúti szakemberek és az egykori hazai vasúti járműgyártás sikereit és eredményességét."
+    },
+    {
+      "type": "M43",
+      "name": "Dácsia",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/20.09.94_Szombathely_M43_1004_%2813175970575%29.jpg/180px-20.09.94_Szombathely_M43_1004_%2813175970575%29.jpg",
+      "manufacturer": "Románia",
+      "wheelArrangement": "B'B'",
+      "numberOfAxels": 4,
+      "engine": "Dízel",
+      "topSpeed": "60 km/h",
+      "power": "331 kW (450 LE)",
+      "transmission": "hidraulikus",
+      "cylinderArrangement": "soros 6",
+      "details": "A gyártónál LDH45 típusjelet kapott mozdonytípust német és osztrák gyártók egyszerű és jól bevált szerkezeti elemeinek licencgyártással előállított elemeiből konstruálta. A licencben gyártott elemek minőségével azonban számos probléma fordult elő főleg az üzembe állítást követően. Ezeket legfőképpen a hanyag megmunkálásra és összeszerelésre lehetett visszavezetni. Így például az elektropneumatikus szelepeknél a gyártás és a szerelés során el nem távolított szennyeződések miatt vezérlési hibák, üzemképtelenségek fordultak elő. Gyakori volt a motorok kenőolajának gázolajjal történő felhígulása, a gázolaj-tápszivattyú megszorulása, ennek következtében az ezt hajtó villanymotor leégése, a gázolajtartályokban és különféle vezetékekben talált fémforgács és festékdarabok szintén egyértelmű gyártási hibára utaltak. A hanyag szerelés miatt gyakoriak voltak az olaj-, gázolaj- és hűtővízfolyások. Szintén igen gyakori volt a hidrosztatika tömlők és az ékszíjak elszakadása, melyek szintén szolgálatképtelenséget okozhattak. A motorok különféle tömítései idő előtt mentek tönkre. A túlerőltetés következtében a típusnál több esetben fordult elő súlyos motorsérülés. A vezetőfülkét a hajtómű magas zajszintje miatt utólag hangszigetelni kellett."
+    },
+    {
+      "type": "Bzmot",
+      "name": "Piroska",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bzmot-268_sp.jpg/250px-Bzmot-268_sp.jpg",
+      "manufacturer": "Csehszlovákia",
+      "wheelArrangement": "A'1'",
+      "numberOfAxels": 2,
+      "engine": "Dízel",
+      "topSpeed": "80 km/h",
+      "power": "141,2 kW / 190 LE",
+      "transmission": "hidromechanikus",
+      "cylinderArrangement": "soros 6",
+      "details": "A motor- és pótkocsik járműszerkezetileg lényegében azonos, könnyű acélszerkezetű, kéttengelyes járművek. Szerkezeti érdekességük az egytengelyes forgóváz. Egy motorkocsi üzemszerűen legfeljebb kettő mellékkocsi vontatására alkalmas, azonban a vezérlés kialakítása lehetővé teszi két motorkocsi egy vezetőállásról történő vezetését, így a nagyobb forgalmú vonatokon akár hat járműből álló szerelvénye is közlekedtethető. A motorkocsi minden gépezeti berendezését a padló alatt helyezték el, szemben a háború előtt beszerzett, magyar dízelmotorvonatokkal (BCmot, később: ABmot), melyeknél az utast és a dízelmotort csak egy burkolat és az azon lévő, eleinte még 3. osztályú pad választotta el. Az utasbiztonságot növeli, hogy a motorkocsi ajtóinak nyitása és zárása központi vezérlésű. Az ajtók reteszelésük megszűnte után kézzel nyithatók, zárásuk viszont pneumatikus úton is lehetséges. A gyári motorral felszerelt motorkocsi végsebessége 70 km/h volt."
+    },
+    {
+      "type": "6342",
+      "name": "Desiro",
+      "url": "",
+      "manufacturer": "Siemens TS",
+      "wheelArrangement": "B'(2)'B'",
+      "numberOfAxels": 10,
+      "engine": "Dízel",
+      "topSpeed": "120 km/h",
+      "power": "2 x 315 kW",
+      "transmission": "hidromechanikus",
+      "cylinderArrangement": "soros 6",
+      "details": "Az ikermotorkocsik a forgalomban teljesítették a hozzájuk fűzött követelményeket, így 2005 és 2006 folyamán újabb 10 db állt forgalomba a típusból, amivel a Desiro flotta 23 egységre bővült. Ezzel teljes mértékben kiváltották az esztergomi vonalon addig használt M41 sorozatú mozdony vontatta ingavonatokat, valamint a Bzmot motorkocsikat. Hétvégenként InterCity-forgalomban megfordultak Bajára, Sátoraljaújhelyre és a nyári időszakban személyvonatként a Balaton északi partján is közlekedtek. A flotta 2009-ben tovább bővült, ugyanis a Görög Államvasutak eladásra kínált fel további 8 darab, 2003-ban gyártott motorkocsit.[6] Ennek is köszönhető, hogy az új járművekből állt össze 2009. augusztus 30-ától az észak-balatoni vasútvonalon több gyorsvonati szerelvény is. Így ezek a vonatok már nem csak a nyári szezonban láthatók a tónál.[7] 2010-től a 142-es vonalon és a Debrecen-Mátészalka-Fehérgyarmat-vasútvonal (110-113-as vonalon) is feltűntek. A 2010/2011-es menetrendváltástól pedig egy Desiro-szerelvény Egerbe is eljutott naponta az új, Fehérgyarmat-Mátészalka-Debrecen-Füzesabony-Eger viszonylatú személyvonatok megjelenésével. A 2011/2012-es menetrendváltástól Budapest-Szentes sebesvonatokat Desirók továbbították."
     }
+    
   ]
 }

@@ -1,0 +1,18 @@
+{
+    "diesel": [
+        {
+            "id": 1,
+            "type": "M62",
+            "name": "Szergej",
+            "url": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/M62.jpg/250px-M62.jpg"],
+            "manufacturer": "Szovjetunió"
+        },
+        {
+            "id": 2,
+            "type": "M61",
+            "name": "Nohab",
+            "url": ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG/180px-Szatymaz_M61_017_m%C3%A9r%C5%91kocsival_2011-07-12.JPG"],
+            "manufacturer": "Svédország"
+        }
+    ]
+}
