@@ -8,20 +8,21 @@ $background_cards: rgb(119, 205, 245);
     margin-bottom: 2%;
     border-radius: 5px;
     color: whitesmoke;
-    max-width: 50%;
     box-shadow: 1px 4px 7px 0 rgba(30, 30, 30, 0.5);
+    max-width: 60%;
 }
 
 .container {
     background-color: $background_main;
     background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+    height: 75vh;
 
-    .container-text {
-        color: yellow;
-        font-size:x-large;
-        text-align: center;
-        margin-top: 10px;
-    }
+    // .container-text {
+    //     color: yellow;
+    //     font-size:x-large;
+    //     text-align: center;
+    //     margin-top: 10px;
+    // }
 }
 
 .container-card {

@@ -4,18 +4,23 @@ $background_cards: rgb(119, 205, 245);
 
 .container-sm {
     background-color: $background_cards;
-    padding: 2%;
+    padding-top: 2%;
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 5px;
     color: whitesmoke;
-    max-width: 50%;
+    max-width: 60%;
     box-shadow: 1px 4px 7px 0 rgba(30, 30, 30, 0.5);
+    
 }
 
 .container {
     background-color: $background_main;
     background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .container-card {
