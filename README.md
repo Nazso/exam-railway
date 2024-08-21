@@ -11,6 +11,7 @@ cd \Locos-backend\
 cd \LocoAngular\
 
 - ng s
+- or: npm run docker:run
 
 # Mozdony ismertető alkalmazás
 
