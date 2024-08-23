@@ -9,6 +9,7 @@ if(!config.has('database')) {
     logger.error('No database config found!');
     process.exit();
 }
+
 const port = config.port || 3000;
 
 const connectionString = process.env.DB_CONNECTION
