@@ -27,7 +27,6 @@ mongoose.connect(connectionString, {
     process.exit();
 });
 
-
 console.log(process.env.PORT);
 
 app.listen(port, () => {
