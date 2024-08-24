@@ -55,7 +55,7 @@ app.use('/electric', electricRoutes);
 app.use('/comment', authenticationByJWT, commentRoutes);
 app.use('/buyitem', authenticationByJWT, buyItemRoutes);
 
-//error handling midleware
+//error handling middleware
 app.use((err, req, res, next) => {
     logger.error(`Error ${err.statusCode}: ${err.message}`);
     res.status(err.statusCode);
