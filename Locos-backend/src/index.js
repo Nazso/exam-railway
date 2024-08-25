@@ -4,7 +4,6 @@ const logger = require('./config/logger');
 
 const app = require('./server');
 
-
 if(!config.has('database')) {
     logger.error('No database config found!');
     process.exit();
