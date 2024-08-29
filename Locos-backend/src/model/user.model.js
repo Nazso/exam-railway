@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const idValidator = require('mongoose-id-validator');
 
-
 const UserSchema = mongoose.Schema({
     username: String,
     email: String,
