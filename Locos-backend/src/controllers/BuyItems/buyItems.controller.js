@@ -34,7 +34,6 @@ exports.findAll = (req, res, next) => {
         })
 };
 
-
 exports.findOne = (req, res, next) => {
     const id = req.params.id;
 
